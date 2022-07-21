@@ -1,0 +1,13 @@
+{
+  "useMarkdownLinks": false,
+  "foldHeading": true,
+  "foldIndent": true,
+  "attachmentFolderPath": "image",
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "vimMode": true,
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "legacyEditor": false,
+  "livePreview": true
+}
