@@ -1,37 +1,37 @@
 {
   "workspaces": {
-    "数学第一章": {
+    "数学": {
       "main": {
         "id": "44177cee7e2e9bd8",
         "type": "split",
         "children": [
           {
-            "id": "e1a557856baed899",
+            "id": "dac3734e51cf12d8",
             "type": "split",
             "children": [
               {
-                "id": "890a74b96ff7ce76",
+                "id": "694a12dfa6c364ab",
                 "type": "split",
-                "dimension": 54.91228070175439,
+                "dimension": 69.58041958041959,
                 "children": [
                   {
-                    "id": "3b537659bc93877c",
+                    "id": "ac39377b175782e5",
                     "type": "leaf",
-                    "dimension": 73.15789473684211,
+                    "dimension": 58.16203143893592,
                     "state": {
                       "type": "markdown",
                       "state": {
                         "file": "数学.md",
                         "mode": "source",
+                        "backlinks": true,
                         "source": false
                       }
-                    },
-                    "group": "7bca0b07f801d498"
+                    }
                   },
                   {
-                    "id": "c9abd15c3fc13506",
+                    "id": "47aac52f975f3205",
                     "type": "split",
-                    "dimension": 26.842105263157894,
+                    "dimension": 41.83796856106408,
                     "children": [
                       {
                         "id": "71934a603616ff3c",
@@ -41,8 +41,7 @@
                           "state": {
                             "file": "数学.md"
                           }
-                        },
-                        "group": "7bca0b07f801d498"
+                        }
                       },
                       {
                         "id": "aa81c8f5f5252549",
@@ -59,30 +58,32 @@
                 "direction": "vertical"
               },
               {
-                "id": "6983419fb025e85b",
+                "id": "348cf31985f2196b",
                 "type": "split",
-                "dimension": 45.08771929824562,
+                "dimension": 30.419580419580424,
                 "children": [
                   {
-                    "id": "98a575a3359edb49",
-                    "type": "leaf",
-                    "state": {
-                      "type": "markdown",
-                      "state": {
-                        "file": "计算处理方法.md",
-                        "mode": "source",
-                        "source": false
-                      }
-                    }
-                  },
-                  {
-                    "id": "ac39377b175782e5",
+                    "id": "b359c1844364a8b2",
                     "type": "leaf",
                     "state": {
                       "type": "markdown",
                       "state": {
                         "file": "反直觉.md",
                         "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
+                  },
+                  {
+                    "id": "557bace0221122dd",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "计算处理方法.md",
+                        "mode": "source",
+                        "backlinks": true,
                         "source": false
                       }
                     }
@@ -200,6 +201,14 @@
                     "unlinkedCollapsed": true
                   }
                 }
+              },
+              {
+                "id": "189cdc90dcc55532",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
               }
             ],
             "currentTab": 1
@@ -251,8 +260,40 @@
         "width": 348,
         "collapsed": true
       },
-      "active": "3b537659bc93877c"
+      "floating": {
+        "id": "772eb5e13620063b",
+        "type": "floating",
+        "children": [
+          {
+            "id": "e540216aaec8d9c5",
+            "type": "window",
+            "children": [
+              {
+                "id": "f0985af0c83c18e9",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Discord.md",
+                    "mode": "preview",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ],
+            "direction": "vertical",
+            "x": -1316,
+            "y": -421,
+            "width": 1103,
+            "height": 738,
+            "maximize": false,
+            "zoom": 0
+          }
+        ]
+      },
+      "active": "ac39377b175782e5"
     }
   },
-  "active": "数学第一章"
+  "active": "数学"
 }
