@@ -10,10 +10,14 @@
   "cm-chs-patch",
   "remember-cursor-position",
   "extract-url",
-  "obsidian-copy-block-link",
   "obsidian-enhancing-mindmap",
   "obsidian-quiet-outline",
   "calendar",
   "obsidian-git",
-  "block-reference-count"
+  "block-reference-count",
+  "recent-files-obsidian",
+  "templater-obsidian",
+  "obsidian-vimrc-support",
+  "obsidian-copy-block-link",
+  "table-editor-obsidian"
 ]

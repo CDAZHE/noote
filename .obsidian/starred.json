@@ -3,12 +3,17 @@
     {
       "type": "file",
       "title": "discord",
-      "path": "Discord.md"
+      "path": "texlive.md"
     },
     {
       "type": "file",
       "title": "红宝书",
       "path": "红宝书.md"
+    },
+    {
+      "type": "file",
+      "title": "第九学期课表",
+      "path": "第九学期课表.md"
     }
   ]
 }

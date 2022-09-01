@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "687f7538f177db03",
+        "id": "b043cd536b952d09",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "倒计时.md",
+            "file": "第四章 不定积分.md",
             "mode": "source",
             "backlinks": true,
             "source": false
@@ -28,20 +28,42 @@
         "type": "tabs",
         "children": [
           {
-            "id": "81cb5740b2dc4e7d",
+            "id": "bbbb8af5c2dec9a9",
             "type": "leaf",
             "state": {
-              "type": "outline",
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "378ad2497938b463",
+            "type": "leaf",
+            "state": {
+              "type": "search",
               "state": {
-                "file": "倒计时.md"
+                "query": "9tiic0",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
               }
+            }
+          },
+          {
+            "id": "f1c83c2c199633de",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 249.5
+    "width": 275.5,
+    "collapsed": true
   },
   "right": {
     "id": "f21bdda7414d711b",
@@ -50,14 +72,15 @@
       {
         "id": "62ae7457e3846620",
         "type": "tabs",
+        "dimension": 20.89642640823743,
         "children": [
           {
-            "id": "b4b761c9c99e9db0",
+            "id": "6cf52eddeef27284",
             "type": "leaf",
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "倒计时.md",
+                "file": "第四章 不定积分.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -71,33 +94,18 @@
                   "collapse-color-groups": true,
                   "colorGroups": [],
                   "collapse-display": true,
-                  "showArrow": false,
+                  "showArrow": true,
                   "textFadeMultiplier": 0,
                   "nodeSizeMultiplier": 1,
                   "lineSizeMultiplier": 1,
                   "collapse-forces": false,
-                  "centerStrength": 0,
-                  "repelStrength": 0,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
                   "linkStrength": 1,
-                  "linkDistance": 250,
-                  "scale": 0.8854989543150409,
+                  "linkDistance": 30,
+                  "scale": 0.7132754626224415,
                   "close": true
                 }
-              }
-            }
-          },
-          {
-            "id": "7f58c960f6747266",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
               }
             }
           },
@@ -118,14 +126,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "倒计时.md",
+                "file": "第四章 不定积分.md",
                 "linksCollapsed": true,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
           {
-            "id": "bc2817e765d37b4f",
+            "id": "ada69a18621125f0",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -133,26 +141,21 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "1551c78d69a85ff9",
         "type": "tabs",
+        "dimension": 56.45063597819503,
         "children": [
           {
-            "id": "bbbb8af5c2dec9a9",
+            "id": "81cb5740b2dc4e7d",
             "type": "leaf",
             "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "f1c83c2c199633de",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
+              "type": "outline",
+              "state": {
+                "file": "第四章 不定积分.md"
+              }
             }
           },
           {
@@ -161,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "倒计时.md",
+                "file": "第四章 不定积分.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,22 +184,37 @@
             }
           }
         ]
+      },
+      {
+        "id": "55cc2cd08619afe8",
+        "type": "tabs",
+        "dimension": 22.652937613567534,
+        "children": [
+          {
+            "id": "cf7aade1e4f56d36",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 272.5
+    "width": 317.5
   },
-  "active": "687f7538f177db03",
+  "active": "b043cd536b952d09",
   "lastOpenFiles": [
-    "反直觉.md",
-    "收集的习题.md",
-    "第三章 一元函数微分学的应用.md",
-    "第二章 导数与微分.md",
-    "计算处理方法.md",
-    "还原成原函数.md",
-    "数学.md",
-    "导数列表.md",
-    "三角公式-高考.md",
-    "三角函数.md"
+    "三角函数与反三角函数图像.md",
+    "计算错误.md",
+    "第四章 不定积分.md",
+    "三角公式.md",
+    "第一章 极限与连续.md",
+    "三角函数.md",
+    "第九学期课表.md",
+    "个人发展规划与创新创业.md",
+    "自然语言理解.md",
+    "还原成原函数.md"
   ]
 }
