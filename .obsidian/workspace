@@ -4,17 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "b043cd536b952d09",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "第四章 不定积分.md",
-            "mode": "source",
-            "backlinks": true,
-            "source": false
+        "id": "7997fe49bc53ebef",
+        "type": "split",
+        "children": [
+          {
+            "id": "4dcb5bb7afb32bf0",
+            "type": "leaf",
+            "dimension": 70.31438935912938,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "第五章 定积分及其应用.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3398b68bfda6cd6f",
+            "type": "leaf",
+            "dimension": 29.685610640870618,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算处理方法.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        }
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -36,15 +58,15 @@
             }
           },
           {
-            "id": "378ad2497938b463",
+            "id": "7f58c960f6747266",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "9tiic0",
+                "query": "弧",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
@@ -58,11 +80,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 275.5,
+    "width": 282,
     "collapsed": true
   },
   "right": {
@@ -72,40 +95,32 @@
       {
         "id": "62ae7457e3846620",
         "type": "tabs",
-        "dimension": 20.89642640823743,
+        "dimension": 46.130592503022974,
         "children": [
           {
-            "id": "6cf52eddeef27284",
+            "id": "5aea5fbfd57cb573",
             "type": "leaf",
             "state": {
-              "type": "localgraph",
+              "type": "backlink",
               "state": {
-                "file": "第四章 不定积分.md",
-                "options": {
-                  "collapse-filter": true,
-                  "search": "",
-                  "localJumps": 2,
-                  "localBacklinks": true,
-                  "localForelinks": true,
-                  "localInterlinks": false,
-                  "showTags": false,
-                  "showAttachments": false,
-                  "hideUnresolved": false,
-                  "collapse-color-groups": true,
-                  "colorGroups": [],
-                  "collapse-display": true,
-                  "showArrow": true,
-                  "textFadeMultiplier": 0,
-                  "nodeSizeMultiplier": 1,
-                  "lineSizeMultiplier": 1,
-                  "collapse-forces": false,
-                  "centerStrength": 0.518713248970312,
-                  "repelStrength": 10,
-                  "linkStrength": 1,
-                  "linkDistance": 30,
-                  "scale": 0.7132754626224415,
-                  "close": true
-                }
+                "file": "第五章 定积分及其应用.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "81cb5740b2dc4e7d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "第五章 定积分及其应用.md"
               }
             }
           },
@@ -126,52 +141,9 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "第四章 不定积分.md",
+                "file": "第五章 定积分及其应用.md",
                 "linksCollapsed": true,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "ada69a18621125f0",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 3
-      },
-      {
-        "id": "1551c78d69a85ff9",
-        "type": "tabs",
-        "dimension": 56.45063597819503,
-        "children": [
-          {
-            "id": "81cb5740b2dc4e7d",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "第四章 不定积分.md"
-              }
-            }
-          },
-          {
-            "id": "5aea5fbfd57cb573",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "第四章 不定积分.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -182,16 +154,67 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "4388b6281c0f60fd",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 5
+      },
+      {
+        "id": "79a1e6c923b7d5cc",
+        "type": "tabs",
+        "dimension": 29.504232164449817,
+        "children": [
+          {
+            "id": "b4b761c9c99e9db0",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "第五章 定积分及其应用.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": false,
+                  "textFadeMultiplier": -3,
+                  "nodeSizeMultiplier": 1.07720797720798,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0,
+                  "repelStrength": 0,
+                  "linkStrength": 0.257834757834758,
+                  "linkDistance": 30,
+                  "scale": 1.0323551502881523,
+                  "close": true
+                }
+              }
+            }
           }
         ]
       },
       {
-        "id": "55cc2cd08619afe8",
+        "id": "598b6e73b97d4f6a",
         "type": "tabs",
-        "dimension": 22.652937613567534,
+        "dimension": 24.365175332527205,
         "children": [
           {
-            "id": "cf7aade1e4f56d36",
+            "id": "d22f90da7a18fae6",
             "type": "leaf",
             "state": {
               "type": "recent-files",
@@ -202,19 +225,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 253.5
   },
-  "active": "b043cd536b952d09",
+  "active": "4dcb5bb7afb32bf0",
   "lastOpenFiles": [
-    "三角函数与反三角函数图像.md",
-    "计算错误.md",
+    "第三章 一元函数微分学的应用.md",
+    "第五章 定积分及其应用.md",
+    "计算处理方法.md",
     "第四章 不定积分.md",
+    "@重点.md",
     "三角公式.md",
-    "第一章 极限与连续.md",
-    "三角函数.md",
-    "第九学期课表.md",
-    "个人发展规划与创新创业.md",
-    "自然语言理解.md",
-    "还原成原函数.md"
+    "数学.md",
+    "反直觉.md",
+    "收集的习题.md",
+    "特殊结构.md"
   ]
 }
