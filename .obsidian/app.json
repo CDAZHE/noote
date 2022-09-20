@@ -9,5 +9,6 @@
   "readableLineLength": false,
   "showLineNumber": true,
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "defaultViewMode": "preview"
 }

@@ -14,6 +14,11 @@
       "type": "file",
       "title": "第九学期课表",
       "path": "第九学期课表.md"
+    },
+    {
+      "type": "file",
+      "title": "倒计时",
+      "path": "倒计时.md"
     }
   ]
 }
