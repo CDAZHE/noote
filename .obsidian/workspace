@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "9b217a3f56619eab",
+        "id": "b173e8d75d341daf",
         "type": "leaf",
+        "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "第五章 定积分及其应用.md",
+            "file": "第七章 微分方程.md",
             "mode": "source",
             "backlinks": true,
             "source": false
-          }
+          },
+          "pinned": true
         }
       }
     ],
@@ -33,7 +35,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rolle",
+                "query": "数学",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -81,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "第五章 定积分及其应用.md",
+                "file": "第七章 微分方程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "第五章 定积分及其应用.md"
+                "file": "第七章 微分方程.md"
               }
             }
           },
@@ -119,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "第五章 定积分及其应用.md",
+                "file": "第七章 微分方程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +136,7 @@
             }
           },
           {
-            "id": "4388b6281c0f60fd",
+            "id": "cbef8239187ae204",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -155,7 +157,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "第五章 定积分及其应用.md",
+                "file": "第七章 微分方程.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -178,7 +180,7 @@
                   "repelStrength": 0,
                   "linkStrength": 0.257834757834758,
                   "linkDistance": 30,
-                  "scale": 0.63462856769306,
+                  "scale": 1.2473980179755288,
                   "close": true
                 }
               }
@@ -205,17 +207,17 @@
     "direction": "horizontal",
     "width": 294.8333435058594
   },
-  "active": "4388b6281c0f60fd",
+  "active": "cbef8239187ae204",
   "lastOpenFiles": [
-    "Daily Notes/2022-09-19.md",
-    "武钟祥.md",
-    "倒计时.md",
-    "计算处理方法.md",
-    "第三章 一元函数微分学的应用.md",
     "第五章 定积分及其应用.md",
-    "收集的习题.md",
-    "计算错误.md",
-    "几乎都错的部分.md",
-    "反直觉.md"
+    "第七章 微分方程.md",
+    "倒计时.md",
+    "第九学期课表.md",
+    "数学.md",
+    "Daily Notes/2022-09-19.md",
+    "重点题型讲解.md",
+    "第六章 微分方程.md",
+    "武钟祥.md",
+    "计算处理方法.md"
   ]
 }

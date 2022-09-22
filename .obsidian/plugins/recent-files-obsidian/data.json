@@ -1,20 +1,36 @@
 {
   "recentFiles": [
     {
+      "basename": "第七章 微分方程",
+      "path": "第七章 微分方程.md"
+    },
+    {
       "basename": "第五章 定积分及其应用",
       "path": "第五章 定积分及其应用.md"
+    },
+    {
+      "basename": "倒计时",
+      "path": "倒计时.md"
+    },
+    {
+      "basename": "第九学期课表",
+      "path": "第九学期课表.md"
+    },
+    {
+      "basename": "数学",
+      "path": "数学.md"
     },
     {
       "basename": "2022-09-19",
       "path": "Daily Notes/2022-09-19.md"
     },
     {
-      "basename": "武钟祥",
-      "path": "武钟祥.md"
+      "basename": "重点题型讲解",
+      "path": "重点题型讲解.md"
     },
     {
-      "basename": "倒计时",
-      "path": "倒计时.md"
+      "basename": "武钟祥",
+      "path": "武钟祥.md"
     },
     {
       "basename": "计算处理方法",
@@ -81,10 +97,6 @@
       "path": "@记忆.md"
     },
     {
-      "basename": "数学",
-      "path": "数学.md"
-    },
-    {
       "basename": "特殊结构",
       "path": "特殊结构.md"
     },
@@ -99,10 +111,6 @@
     {
       "basename": "自然语言理解",
       "path": "自然语言理解.md"
-    },
-    {
-      "basename": "第九学期课表",
-      "path": "第九学期课表.md"
     },
     {
       "basename": "还原成原函数",
