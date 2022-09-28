@@ -104,15 +104,7 @@
       "key": "C"
     }
   ],
-  "editor:insert-link": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "L"
-    }
-  ],
+  "editor:insert-link": [],
   "editor:open-search-replace": [
     {
       "modifiers": [
@@ -131,5 +123,8 @@
       "key": "C"
     }
   ],
-  "obsidian-copy-block-link:copy-link-to-block": []
+  "obsidian-copy-block-link:copy-link-to-block": [],
+  "insert-current-date": [],
+  "editor:delete-paragraph": [],
+  "app:delete-file": []
 }

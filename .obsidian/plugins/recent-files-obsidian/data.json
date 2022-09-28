@@ -5,6 +5,22 @@
       "path": "第七章 微分方程.md"
     },
     {
+      "basename": "cdz",
+      "path": "cdz.md"
+    },
+    {
+      "basename": "立方和差",
+      "path": "立方和差.md"
+    },
+    {
+      "basename": "反直觉",
+      "path": "反直觉.md"
+    },
+    {
+      "basename": "自然限定的范围",
+      "path": "自然限定的范围.md"
+    },
+    {
       "basename": "第五章 定积分及其应用",
       "path": "第五章 定积分及其应用.md"
     },
@@ -13,16 +29,40 @@
       "path": "倒计时.md"
     },
     {
+      "basename": "自然语言理解",
+      "path": "自然语言理解.md"
+    },
+    {
       "basename": "第九学期课表",
       "path": "第九学期课表.md"
     },
     {
-      "basename": "数学",
-      "path": "数学.md"
+      "basename": "第三章 一元函数微分学的应用",
+      "path": "第三章 一元函数微分学的应用.md"
+    },
+    {
+      "basename": "@记忆",
+      "path": "@记忆.md"
+    },
+    {
+      "basename": "计算处理方法",
+      "path": "计算处理方法.md"
+    },
+    {
+      "basename": "套娃题目",
+      "path": "套娃题目.md"
+    },
+    {
+      "basename": "三角函数与反三角函数图像",
+      "path": "三角函数与反三角函数图像.md"
     },
     {
       "basename": "2022-09-19",
       "path": "Daily Notes/2022-09-19.md"
+    },
+    {
+      "basename": "数学",
+      "path": "数学.md"
     },
     {
       "basename": "重点题型讲解",
@@ -31,14 +71,6 @@
     {
       "basename": "武钟祥",
       "path": "武钟祥.md"
-    },
-    {
-      "basename": "计算处理方法",
-      "path": "计算处理方法.md"
-    },
-    {
-      "basename": "第三章 一元函数微分学的应用",
-      "path": "第三章 一元函数微分学的应用.md"
     },
     {
       "basename": "收集的习题",
@@ -51,10 +83,6 @@
     {
       "basename": "几乎都错的部分",
       "path": "几乎都错的部分.md"
-    },
-    {
-      "basename": "反直觉",
-      "path": "反直觉.md"
     },
     {
       "basename": "三角公式",
@@ -93,10 +121,6 @@
       "path": "第一章 极限与连续.md"
     },
     {
-      "basename": "@记忆",
-      "path": "@记忆.md"
-    },
-    {
       "basename": "特殊结构",
       "path": "特殊结构.md"
     },
@@ -109,10 +133,6 @@
       "path": "用时统计.md"
     },
     {
-      "basename": "自然语言理解",
-      "path": "自然语言理解.md"
-    },
-    {
       "basename": "还原成原函数",
       "path": "还原成原函数.md"
     },
@@ -123,10 +143,6 @@
     {
       "basename": "第二章 导数与微分",
       "path": "第二章 导数与微分.md"
-    },
-    {
-      "basename": "三角函数与反三角函数图像",
-      "path": "三角函数与反三角函数图像.md"
     },
     {
       "basename": "个人发展规划与创新创业",

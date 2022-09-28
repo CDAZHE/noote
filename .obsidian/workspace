@@ -4,14 +4,14 @@
     "type": "split",
     "children": [
       {
-        "id": "b173e8d75d341daf",
+        "id": "53cabdf5dc1dfb3a",
         "type": "leaf",
         "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
             "file": "第七章 微分方程.md",
-            "mode": "source",
+            "mode": "preview",
             "backlinks": true,
             "source": false
           },
@@ -35,7 +35,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "数学",
+                "query": "f2ucye",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -60,13 +60,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 282,
-    "collapsed": true
+    "width": 282
   },
   "right": {
     "id": "f21bdda7414d711b",
@@ -75,7 +73,7 @@
       {
         "id": "62ae7457e3846620",
         "type": "tabs",
-        "dimension": 46.130592503022974,
+        "dimension": 37.2960372960373,
         "children": [
           {
             "id": "5aea5fbfd57cb573",
@@ -136,7 +134,7 @@
             }
           },
           {
-            "id": "cbef8239187ae204",
+            "id": "60ba4e2d539feec5",
             "type": "leaf",
             "state": {
               "type": "git-view",
@@ -149,7 +147,7 @@
       {
         "id": "79a1e6c923b7d5cc",
         "type": "tabs",
-        "dimension": 29.504232164449817,
+        "dimension": 38.34498834498834,
         "children": [
           {
             "id": "b4b761c9c99e9db0",
@@ -191,7 +189,7 @@
       {
         "id": "598b6e73b97d4f6a",
         "type": "tabs",
-        "dimension": 24.365175332527205,
+        "dimension": 24.358974358974347,
         "children": [
           {
             "id": "d22f90da7a18fae6",
@@ -205,19 +203,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 294.8333435058594
+    "width": 260.8333435058594
   },
-  "active": "cbef8239187ae204",
+  "active": "53cabdf5dc1dfb3a",
   "lastOpenFiles": [
-    "第五章 定积分及其应用.md",
+    "cdz.md",
     "第七章 微分方程.md",
+    "立方和差.md",
+    "反直觉.md",
+    "自然限定的范围.md",
+    "第五章 定积分及其应用.md",
     "倒计时.md",
+    "自然语言理解.md",
     "第九学期课表.md",
-    "数学.md",
-    "Daily Notes/2022-09-19.md",
-    "重点题型讲解.md",
-    "第六章 微分方程.md",
-    "武钟祥.md",
-    "计算处理方法.md"
+    "第三章 一元函数微分学的应用.md"
   ]
 }

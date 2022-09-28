@@ -18665,7 +18665,7 @@ var index = {
 var isomorphic_git_default = index;
 
 // src/main.ts
-var import_obsidian22 = __toModule(require("obsidian"));
+var import_obsidian23 = __toModule(require("obsidian"));
 
 // src/promiseQueue.ts
 init_polyfill_buffer();
@@ -19462,17 +19462,25 @@ var FileType;
 // src/ui/modals/generalModal.ts
 init_polyfill_buffer();
 var import_obsidian3 = __toModule(require("obsidian"));
+var generalModalConfigDefaults = {
+  options: [],
+  placeholder: "",
+  allowEmpty: false,
+  onlySelection: false,
+  initialValue: void 0
+};
 var GeneralModal = class extends import_obsidian3.SuggestModal {
-  constructor(app2, options, placeholder, allowEmpty = false, onlySelection = false) {
-    super(app2);
-    this.options = options;
-    this.allowEmpty = allowEmpty;
-    this.onlySelection = onlySelection;
-    this.resolve = null;
-    this.setPlaceholder(placeholder);
+  constructor(config) {
+    super(app);
+    this.config = { ...generalModalConfigDefaults, ...config };
+    this.setPlaceholder(this.config.placeholder);
   }
   open() {
     super.open();
+    if (this.config.initialValue != void 0) {
+      this.inputEl.value = this.config.initialValue;
+      this.inputEl.dispatchEvent(new Event("input"));
+    }
     return new Promise((resolve) => {
       this.resolve = resolve;
     });
@@ -19480,7 +19488,7 @@ var GeneralModal = class extends import_obsidian3.SuggestModal {
   selectSuggestion(value, evt) {
     if (this.resolve) {
       let res;
-      if (this.allowEmpty && value === " ")
+      if (this.config.allowEmpty && value === " ")
         res = "";
       else if (value === "...")
         res = void 0;
@@ -19495,18 +19503,18 @@ var GeneralModal = class extends import_obsidian3.SuggestModal {
       this.resolve(void 0);
   }
   getSuggestions(query) {
-    if (this.onlySelection) {
-      return this.options;
-    } else if (this.allowEmpty) {
-      return [query.length > 0 ? query : " ", ...this.options];
+    if (this.config.onlySelection) {
+      return this.config.options;
+    } else if (this.config.allowEmpty) {
+      return [query.length > 0 ? query : " ", ...this.config.options];
     } else {
-      return [query.length > 0 ? query : "...", ...this.options];
+      return [query.length > 0 ? query : "...", ...this.config.options];
     }
   }
   renderSuggestion(value, el) {
-    el.innerText = value;
+    el.setText(value);
   }
-  onChooseSuggestion(item, _) {
+  onChooseSuggestion(item, evt) {
   }
 };
 
@@ -19525,26 +19533,13 @@ var worthWalking2 = (filepath, root) => {
 };
 function getNewLeaf(event) {
   let leaf;
-  if (!event) {
-    leaf = app.workspace.getLeaf(false);
-  } else {
-    if ((0, import_obsidian4.requireApiVersion)("0.16.0")) {
-      if (event.ctrlKey && event.altKey && event.shiftKey) {
-        leaf = app.workspace.getLeaf("window");
-      } else if (event.ctrlKey && event.altKey) {
-        leaf = app.workspace.getLeaf("split");
-      } else if (event.ctrlKey) {
-        leaf = app.workspace.getLeaf("tab");
-      } else {
-        leaf = app.workspace.getLeaf(false);
-      }
-    } else {
-      if (event.ctrlKey) {
-        leaf = app.workspace.getLeaf(true);
-      } else {
-        leaf = app.workspace.getLeaf(false);
-      }
+  if (event) {
+    if (event.button === 0 || event.button === 1) {
+      const type = import_obsidian4.Keymap.isModEvent(event);
+      leaf = app.workspace.getLeaf(type);
     }
+  } else {
+    leaf = app.workspace.getLeaf(false);
   }
   return leaf;
 }
@@ -19581,16 +19576,17 @@ var IsomorphicGit = class extends GitManager {
       fs: this.fs,
       dir: this.plugin.settings.basePath,
       onAuth: () => {
+        var _a2;
         return {
           username: this.plugin.settings.username,
-          password: this.plugin.localStorage.getPassword()
+          password: (_a2 = this.plugin.localStorage.getPassword()) != null ? _a2 : void 0
         };
       },
       onAuthFailure: async () => {
         new import_obsidian5.Notice("Authentication failed. Please try with different credentials");
-        const username = await new GeneralModal(app, [], "Specify your username").open();
+        const username = await new GeneralModal({ placeholder: "Specify your username" }).open();
         if (username) {
-          const password = await new GeneralModal(app, [], "Specify your password/personal access token").open();
+          const password = await new GeneralModal({ placeholder: "Specify your password/personal access token" }).open();
           if (password) {
             this.plugin.settings.username = username;
             await this.plugin.saveSettings();
@@ -19881,6 +19877,25 @@ var IsomorphicGit = class extends GitManager {
       this.plugin.displayError(error);
       throw error;
     }
+  }
+  async createBranch(branch2) {
+    try {
+      await this.wrapFS(isomorphic_git_default.branch({ ...this.getRepo(), ref: branch2, checkout: true }));
+    } catch (error) {
+      this.plugin.displayError(error);
+      throw error;
+    }
+  }
+  async deleteBranch(branch2) {
+    try {
+      await this.wrapFS(isomorphic_git_default.deleteBranch({ ...this.getRepo(), ref: branch2 }));
+    } catch (error) {
+      this.plugin.displayError(error);
+      throw error;
+    }
+  }
+  async branchIsMerged(branch2) {
+    return true;
   }
   async init() {
     try {
@@ -24198,6 +24213,16 @@ var SimpleGit = class extends GitManager {
   async checkout(branch2) {
     await this.git.checkout(branch2, (err) => this.onError(err));
   }
+  async createBranch(branch2) {
+    await this.git.checkout(["-b", branch2], (err) => this.onError(err));
+  }
+  async deleteBranch(branch2, force) {
+    await this.git.branch([force ? "-D" : "-d", branch2], (err) => this.onError(err));
+  }
+  async branchIsMerged(branch2) {
+    const notMergedBranches = await this.git.branch(["--no-merged"], (err) => this.onError(err));
+    return !notMergedBranches.all.contains(branch2);
+  }
   async init() {
     await this.git.init(false, (err) => this.onError(err));
   }
@@ -24398,9 +24423,12 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
         plugin.settings.commitDateFormat = value;
         await plugin.saveSettings();
       }));
-      new import_obsidian7.Setting(containerEl).setName("{{hostname}} placeholder replacement").setDesc("Specify custom hostname for every device.").addText((text2) => text2.setValue(plugin.localStorage.getHostname()).onChange(async (value) => {
-        plugin.localStorage.setHostname(value);
-      }));
+      new import_obsidian7.Setting(containerEl).setName("{{hostname}} placeholder replacement").setDesc("Specify custom hostname for every device.").addText((text2) => {
+        var _a2;
+        return text2.setValue((_a2 = plugin.localStorage.getHostname()) != null ? _a2 : "").onChange(async (value) => {
+          plugin.localStorage.setHostname(value);
+        });
+      });
       new import_obsidian7.Setting(containerEl).setName("Preview commit message").addButton((button) => button.setButtonText("Preview").onClick(async () => {
         const commitMessagePreview = await plugin.gitManager.formatCommitMessage(plugin.settings.commitMessage);
         new import_obsidian7.Notice(`${commitMessagePreview}`);
@@ -24440,18 +24468,6 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
     }
     containerEl.createEl("br");
     containerEl.createEl("h3", { text: "Miscellaneous" });
-    if (gitReady)
-      new import_obsidian7.Setting(containerEl).setName("Current branch").setDesc("Switch to a different branch").addDropdown(async (dropdown) => {
-        const branchInfo = await plugin.gitManager.branchInfo();
-        for (const branch2 of branchInfo.branches) {
-          dropdown.addOption(branch2, branch2);
-        }
-        dropdown.setValue(branchInfo.current);
-        dropdown.onChange(async (option) => {
-          await plugin.gitManager.checkout(option);
-          new import_obsidian7.Notice(`Checked out to ${option}`);
-        });
-      });
     new import_obsidian7.Setting(containerEl).setName("Automatically refresh Source Control View on file changes").setDesc("On slower machines this may cause lags. If so, just disable this option").addToggle((toggle) => toggle.setValue(plugin.settings.refreshSourceControl).onChange((value) => {
       plugin.settings.refreshSourceControl = value;
       plugin.saveSettings();
@@ -24469,6 +24485,10 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
       plugin.settings.showStatusBar = value;
       plugin.saveSettings();
     }));
+    new import_obsidian7.Setting(containerEl).setName("Show branch status bar").setDesc("Obsidian must be restarted for the changes to take affect").addToggle((toggle) => toggle.setValue(plugin.settings.showBranchStatusBar).onChange((value) => {
+      plugin.settings.showBranchStatusBar = value;
+      plugin.saveSettings();
+    }));
     new import_obsidian7.Setting(containerEl).setName("Show changes files count in status bar").addToggle((toggle) => toggle.setValue(plugin.settings.changedFilesInStatusBar).onChange((value) => {
       plugin.settings.changedFilesInStatusBar = value;
       plugin.saveSettings();
@@ -24482,7 +24502,8 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
       }));
     if (plugin.gitManager instanceof SimpleGit)
       new import_obsidian7.Setting(containerEl).setName("Custom Git binary path").addText((cb) => {
-        cb.setValue(plugin.localStorage.getGitPath());
+        var _a2;
+        cb.setValue((_a2 = plugin.localStorage.getGitPath()) != null ? _a2 : "");
         cb.setPlaceholder("git");
         cb.onChange((value) => {
           plugin.localStorage.setGitPath(value);
@@ -24763,7 +24784,8 @@ var DEFAULT_SETTINGS = {
   changedFilesInStatusBar: false,
   username: "",
   showedMobileNotice: false,
-  refreshSourceControlTimer: 7e3
+  refreshSourceControlTimer: 7e3,
+  showBranchStatusBar: true
 };
 var GIT_VIEW_CONFIG = {
   type: "git-view",
@@ -26497,10 +26519,41 @@ var DiffView = class extends import_obsidian13.ItemView {
   }
 };
 
-// src/ui/modals/ignoreModal.ts
+// src/ui/modals/branchModal.ts
 init_polyfill_buffer();
 var import_obsidian14 = __toModule(require("obsidian"));
-var IgnoreModal = class extends import_obsidian14.Modal {
+var BranchModal = class extends import_obsidian14.FuzzySuggestModal {
+  constructor(branches) {
+    super(app);
+    this.branches = branches;
+    this.setPlaceholder("Select branch to checkout");
+  }
+  getItems() {
+    return this.branches;
+  }
+  getItemText(item) {
+    return item;
+  }
+  onChooseItem(item, evt) {
+    this.resolve(item);
+  }
+  open() {
+    super.open();
+    return new Promise((resolve) => {
+      this.resolve = resolve;
+    });
+  }
+  async onClose() {
+    await new Promise((resolve) => setTimeout(resolve, 10));
+    if (this.resolve)
+      this.resolve(void 0);
+  }
+};
+
+// src/ui/modals/ignoreModal.ts
+init_polyfill_buffer();
+var import_obsidian15 = __toModule(require("obsidian"));
+var IgnoreModal = class extends import_obsidian15.Modal {
   constructor(app2, content) {
     super(app2);
     this.content = content;
@@ -26538,7 +26591,7 @@ var IgnoreModal = class extends import_obsidian14.Modal {
 
 // src/ui/sidebar/sidebarView.ts
 init_polyfill_buffer();
-var import_obsidian21 = __toModule(require("obsidian"));
+var import_obsidian22 = __toModule(require("obsidian"));
 
 // src/ui/sidebar/gitView.svelte
 init_polyfill_buffer();
@@ -27153,7 +27206,7 @@ var SvelteComponent = class {
 };
 
 // src/ui/sidebar/gitView.svelte
-var import_obsidian20 = __toModule(require("obsidian"));
+var import_obsidian21 = __toModule(require("obsidian"));
 
 // node_modules/svelte/index.mjs
 init_polyfill_buffer();
@@ -27189,7 +27242,7 @@ function slide(node, { delay: delay2 = 0, duration = 400, easing = cubicOut } = 
 
 // src/ui/sidebar/components/fileComponent.svelte
 init_polyfill_buffer();
-var import_obsidian17 = __toModule(require("obsidian"));
+var import_obsidian18 = __toModule(require("obsidian"));
 
 // node_modules/obsidian-community-lib/dist/index.js
 init_polyfill_buffer();
@@ -27197,7 +27250,7 @@ init_polyfill_buffer();
 // node_modules/obsidian-community-lib/dist/utils.js
 init_polyfill_buffer();
 var feather = __toModule(require_feather());
-var import_obsidian15 = __toModule(require("obsidian"));
+var import_obsidian16 = __toModule(require("obsidian"));
 function hoverPreview(event, view, to) {
   const targetEl = event.target;
   app.workspace.trigger("hover-link", {
@@ -27211,8 +27264,8 @@ function hoverPreview(event, view, to) {
 
 // src/ui/modals/discardModal.ts
 init_polyfill_buffer();
-var import_obsidian16 = __toModule(require("obsidian"));
-var DiscardModal = class extends import_obsidian16.Modal {
+var import_obsidian17 = __toModule(require("obsidian"));
+var DiscardModal = class extends import_obsidian17.Modal {
   constructor(app2, deletion, filename) {
     super(app2);
     this.deletion = deletion;
@@ -27270,7 +27323,10 @@ function create_if_block(ctx) {
       insert(target, div, anchor);
       ctx[11](div);
       if (!mounted) {
-        dispose = listen(div, "click", ctx[5]);
+        dispose = [
+          listen(div, "auxclick", ctx[5]),
+          listen(div, "click", ctx[5])
+        ];
         mounted = true;
       }
     },
@@ -27280,7 +27336,7 @@ function create_if_block(ctx) {
         detach(div);
       ctx[11](null);
       mounted = false;
-      dispose();
+      run_all(dispose);
     }
   };
 }
@@ -27360,6 +27416,7 @@ function create_fragment(ctx) {
       if (!mounted) {
         dispose = [
           listen(span0, "click", self2(ctx[7])),
+          listen(span0, "auxclick", self2(ctx[7])),
           listen(div0, "click", ctx[8]),
           listen(div1, "click", ctx[6]),
           listen(main, "mouseover", ctx[4]),
@@ -27419,16 +27476,18 @@ function instance($$self, $$props, $$invalidate) {
   let { view } = $$props;
   let { manager } = $$props;
   let buttons = [];
-  window.setTimeout(() => buttons.forEach((b) => (0, import_obsidian17.setIcon)(b, b.getAttr("data-icon"), 16)), 0);
+  window.setTimeout(() => buttons.forEach((b) => (0, import_obsidian18.setIcon)(b, b.getAttr("data-icon"), 16)), 0);
   function hover(event) {
     if (!change.path.startsWith(view.app.vault.configDir) || !change.path.startsWith(".")) {
       hoverPreview(event, view, change.vault_path.split("/").last().replace(".md", ""));
     }
   }
   function open(event) {
+    var _a2;
     const file = view.app.vault.getAbstractFileByPath(change.vault_path);
-    if (file instanceof import_obsidian17.TFile) {
-      getNewLeaf(event).openFile(file);
+    console.log(event);
+    if (file instanceof import_obsidian18.TFile) {
+      (_a2 = getNewLeaf(event)) === null || _a2 === void 0 ? void 0 : _a2.openFile(file);
     }
   }
   function stage() {
@@ -27437,7 +27496,8 @@ function instance($$self, $$props, $$invalidate) {
     });
   }
   function showDiff(event) {
-    getNewLeaf(event).setViewState({
+    var _a2;
+    (_a2 = getNewLeaf(event)) === null || _a2 === void 0 ? void 0 : _a2.setViewState({
       type: DIFF_VIEW_CONFIG.type,
       active: true,
       state: { file: change.path, staged: false }
@@ -27521,7 +27581,7 @@ var fileComponent_default = FileComponent;
 
 // src/ui/sidebar/components/pulledFileComponent.svelte
 init_polyfill_buffer();
-var import_obsidian18 = __toModule(require("obsidian"));
+var import_obsidian19 = __toModule(require("obsidian"));
 function add_css2(target) {
   append_styles(target, "svelte-1pr4yz5", "main.svelte-1pr4yz5.svelte-1pr4yz5{cursor:pointer;background-color:var(--background-secondary);border-radius:4px;width:98%;display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:2px}main.svelte-1pr4yz5 .path.svelte-1pr4yz5{color:var(--text-muted);white-space:nowrap;max-width:75%;overflow:hidden;text-overflow:ellipsis}main.svelte-1pr4yz5:hover .path.svelte-1pr4yz5{color:var(--text-normal);transition:all 200ms}main.svelte-1pr4yz5 .tools.svelte-1pr4yz5{display:flex;align-items:center}main.svelte-1pr4yz5 .tools .type.svelte-1pr4yz5{height:16px;width:16px;margin:0;display:flex;align-items:center;justify-content:center}main.svelte-1pr4yz5 .tools .type[data-type=M].svelte-1pr4yz5{color:orange}main.svelte-1pr4yz5 .tools .type[data-type=D].svelte-1pr4yz5{color:red}");
 }
@@ -27611,9 +27671,10 @@ function instance2($$self, $$props, $$invalidate) {
     }
   }
   function open(event) {
+    var _a2;
     const file = view.app.vault.getAbstractFileByPath(change.vault_path);
-    if (file instanceof import_obsidian18.TFile) {
-      getNewLeaf(event).openFile(file);
+    if (file instanceof import_obsidian19.TFile) {
+      (_a2 = getNewLeaf(event)) === null || _a2 === void 0 ? void 0 : _a2.openFile(file);
     }
   }
   function focus_handler(event) {
@@ -27643,7 +27704,7 @@ var pulledFileComponent_default = PulledFileComponent;
 
 // src/ui/sidebar/components/stagedFileComponent.svelte
 init_polyfill_buffer();
-var import_obsidian19 = __toModule(require("obsidian"));
+var import_obsidian20 = __toModule(require("obsidian"));
 function add_css3(target) {
   append_styles(target, "svelte-15heedx", "main.svelte-15heedx.svelte-15heedx.svelte-15heedx{cursor:pointer;background-color:var(--background-secondary);border-radius:4px;width:98%;display:flex;justify-content:space-between;font-size:0.8rem;margin-bottom:2px}main.svelte-15heedx .path.svelte-15heedx.svelte-15heedx{color:var(--text-muted);white-space:nowrap;max-width:75%;overflow:hidden;text-overflow:ellipsis}main.svelte-15heedx:hover .path.svelte-15heedx.svelte-15heedx{color:var(--text-normal);transition:all 200ms}main.svelte-15heedx .tools.svelte-15heedx.svelte-15heedx{display:flex;align-items:center}main.svelte-15heedx .tools .type.svelte-15heedx.svelte-15heedx{height:16px;width:16px;margin:0;display:flex;align-items:center;justify-content:center}main.svelte-15heedx .tools .type[data-type=M].svelte-15heedx.svelte-15heedx{color:orange}main.svelte-15heedx .tools .type[data-type=D].svelte-15heedx.svelte-15heedx{color:red}main.svelte-15heedx .tools .type[data-type=A].svelte-15heedx.svelte-15heedx{color:yellowgreen}main.svelte-15heedx .tools .type[data-type=R].svelte-15heedx.svelte-15heedx{color:violet}main.svelte-15heedx .tools .buttons.svelte-15heedx.svelte-15heedx{display:flex}main.svelte-15heedx .tools .buttons.svelte-15heedx>.svelte-15heedx{color:var(--text-faint);height:16px;width:16px;margin:0;transition:all 0.2s;border-radius:2px;margin-right:1px}main.svelte-15heedx .tools .buttons.svelte-15heedx>.svelte-15heedx:hover{color:var(--text-normal);background-color:var(--interactive-accent)}");
 }
@@ -27800,20 +27861,22 @@ function instance3($$self, $$props, $$invalidate) {
   let { view } = $$props;
   let { manager } = $$props;
   let buttons = [];
-  window.setTimeout(() => buttons.forEach((b) => (0, import_obsidian19.setIcon)(b, b.getAttr("data-icon"), 16)), 0);
+  window.setTimeout(() => buttons.forEach((b) => (0, import_obsidian20.setIcon)(b, b.getAttr("data-icon"), 16)), 0);
   function hover(event) {
     if (!change.path.startsWith(view.app.vault.configDir) || !change.path.startsWith(".")) {
       hoverPreview(event, view, formattedPath.split("/").last().replace(".md", ""));
     }
   }
   function open(event) {
+    var _a2;
     const file = view.app.vault.getAbstractFileByPath(change.vault_path);
-    if (file instanceof import_obsidian19.TFile) {
-      getNewLeaf(event).openFile(file);
+    if (file instanceof import_obsidian20.TFile) {
+      (_a2 = getNewLeaf(event)) === null || _a2 === void 0 ? void 0 : _a2.openFile(file);
     }
   }
   function showDiff(event) {
-    getNewLeaf(event).setViewState({
+    var _a2;
+    (_a2 = getNewLeaf(event)) === null || _a2 === void 0 ? void 0 : _a2.setViewState({
       type: DIFF_VIEW_CONFIG.type,
       active: true,
       state: { file: change.path, staged: true }
@@ -29741,8 +29804,8 @@ function instance5($$self, $$props, $$invalidate) {
   addEventListener("git-view-refresh", refresh);
   plugin.app.workspace.onLayoutReady(() => {
     window.setTimeout(() => {
-      buttons.forEach((btn) => (0, import_obsidian20.setIcon)(btn, btn.getAttr("data-icon"), 16));
-      (0, import_obsidian20.setIcon)(layoutBtn, showTree ? "list" : "folder", 16);
+      buttons.forEach((btn) => (0, import_obsidian21.setIcon)(btn, btn.getAttr("data-icon"), 16));
+      (0, import_obsidian21.setIcon)(layoutBtn, showTree ? "list" : "folder", 16);
     }, 0);
   });
   onDestroy(() => {
@@ -29879,7 +29942,7 @@ function instance5($$self, $$props, $$invalidate) {
       $: {
         if (layoutBtn) {
           layoutBtn.empty();
-          (0, import_obsidian20.setIcon)(layoutBtn, showTree ? "list" : "folder", 16);
+          (0, import_obsidian21.setIcon)(layoutBtn, showTree ? "list" : "folder", 16);
         }
       }
     }
@@ -29929,7 +29992,7 @@ var GitView = class extends SvelteComponent {
 var gitView_default = GitView;
 
 // src/ui/sidebar/sidebarView.ts
-var GitView2 = class extends import_obsidian21.ItemView {
+var GitView2 = class extends import_obsidian22.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.plugin = plugin;
@@ -29959,8 +30022,33 @@ var GitView2 = class extends import_obsidian21.ItemView {
   }
 };
 
+// src/ui/statusBar/branchStatusBar.ts
+init_polyfill_buffer();
+var BranchStatusBar = class {
+  constructor(statusBarEl, plugin) {
+    this.statusBarEl = statusBarEl;
+    this.plugin = plugin;
+    this.statusBarEl.addClass("mod-clickable");
+    this.statusBarEl.onClickEvent((e) => {
+      this.plugin.switchBranch();
+    });
+  }
+  async display() {
+    if (this.plugin.gitReady) {
+      const branchInfo = await this.plugin.gitManager.branchInfo();
+      if (branchInfo.current != void 0) {
+        this.statusBarEl.setText(branchInfo.current);
+      } else {
+        this.statusBarEl.empty();
+      }
+    } else {
+      this.statusBarEl.empty();
+    }
+  }
+};
+
 // src/main.ts
-var ObsidianGit = class extends import_obsidian22.Plugin {
+var ObsidianGit = class extends import_obsidian23.Plugin {
   constructor() {
     super(...arguments);
     this.gitReady = false;
@@ -30043,11 +30131,12 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
       id: "open-diff-view",
       name: "Open diff view",
       checkCallback: (checking) => {
+        var _a2;
         const file = this.app.workspace.getActiveFile();
         if (checking) {
           return file !== null;
         } else {
-          getNewLeaf().setViewState({ type: DIFF_VIEW_CONFIG.type, state: { staged: false, file: file.path } });
+          (_a2 = getNewLeaf()) == null ? void 0 : _a2.setViewState({ type: DIFF_VIEW_CONFIG.type, state: { staged: false, file: file.path } });
         }
       }
     });
@@ -30163,16 +30252,16 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
       callback: async () => {
         const repoExists = await this.app.vault.adapter.exists(`${this.settings.basePath}/.git`);
         if (repoExists) {
-          const modal = new GeneralModal(this.app, ["NO", "YES"], "Do you really want to delete the repository (.git directory)? This action cannot be undone.", false, true);
+          const modal = new GeneralModal({ options: ["NO", "YES"], placeholder: "Do you really want to delete the repository (.git directory)? This action cannot be undone.", onlySelection: true });
           const shouldDelete = await modal.open() === "YES";
           if (shouldDelete) {
             await this.app.vault.adapter.rmdir(`${this.settings.basePath}/.git`, true);
-            new import_obsidian22.Notice("Successfully deleted repository. Reloading plugin...");
+            new import_obsidian23.Notice("Successfully deleted repository. Reloading plugin...");
             this.unloadPlugin();
             this.init();
           }
         } else {
-          new import_obsidian22.Notice("No repository found");
+          new import_obsidian23.Notice("No repository found");
         }
       }
     });
@@ -30201,20 +30290,52 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
         new ChangedFilesModal(this, status2.changed).open();
       }
     });
+    this.addCommand({
+      id: "switch-branch",
+      name: "Switch branch",
+      callback: () => {
+        this.switchBranch();
+      }
+    });
+    this.addCommand({
+      id: "create-branch",
+      name: "Create new branch",
+      callback: () => {
+        this.createBranch();
+      }
+    });
+    this.addCommand({
+      id: "delete-branch",
+      name: "Delete branch",
+      callback: () => {
+        this.deleteBranch();
+      }
+    });
     this.registerEvent(this.app.workspace.on("file-menu", (menu, file, source) => {
       this.handleFileMenu(menu, file, source);
     }));
     if (this.settings.showStatusBar) {
       const statusBarEl = this.addStatusBarItem();
       this.statusBar = new StatusBar(statusBarEl, this);
-      this.registerInterval(window.setInterval(() => this.statusBar.display(), 1e3));
+      this.registerInterval(window.setInterval(() => {
+        var _a2;
+        return (_a2 = this.statusBar) == null ? void 0 : _a2.display();
+      }, 1e3));
+    }
+    if (import_obsidian23.Platform.isDesktop && this.settings.showBranchStatusBar) {
+      const branchStatusBarEl = this.addStatusBarItem();
+      this.branchBar = new BranchStatusBar(branchStatusBarEl, this);
+      this.registerInterval(window.setInterval(() => {
+        var _a2;
+        return (_a2 = this.branchBar) == null ? void 0 : _a2.display();
+      }, 6e4));
     }
     this.app.workspace.onLayoutReady(() => this.init());
   }
   setRefreshDebouncer() {
     var _a2;
     (_a2 = this.debRefresh) == null ? void 0 : _a2.cancel();
-    this.debRefresh = (0, import_obsidian22.debounce)(() => {
+    this.debRefresh = (0, import_obsidian23.debounce)(() => {
       if (this.settings.refreshSourceControl) {
         this.refresh();
       }
@@ -30222,13 +30343,13 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
   }
   async showNotices() {
     const length = 1e4;
-    if (this.manifest.id === "obsidian-git" && import_obsidian22.Platform.isDesktopApp && !this.settings.showedMobileNotice) {
-      new import_obsidian22.Notice("Obsidian Git is now available on mobile! Please read the plugin's README for more information.", length);
+    if (this.manifest.id === "obsidian-git" && import_obsidian23.Platform.isDesktopApp && !this.settings.showedMobileNotice) {
+      new import_obsidian23.Notice("Obsidian Git is now available on mobile! Please read the plugin's README for more information.", length);
       this.settings.showedMobileNotice = true;
       await this.saveSettings();
     }
     if (this.manifest.id === "obsidian-git-isomorphic") {
-      new import_obsidian22.Notice("Obsidian Git Mobile is now deprecated. Please uninstall it and install Obsidian Git instead.", length);
+      new import_obsidian23.Notice("Obsidian Git Mobile is now deprecated. Please uninstall it and install Obsidian Git instead.", length);
     }
   }
   handleFileMenu(menu, file, source) {
@@ -30243,7 +30364,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
     menu.addItem((item) => {
       item.setTitle(`Git: Stage`).setIcon("plus-circle").setSection("action").onClick((_) => {
         this.promiseQueue.addTask(async () => {
-          if (file instanceof import_obsidian22.TFile) {
+          if (file instanceof import_obsidian23.TFile) {
             await this.gitManager.stage(file.path, true);
           } else {
             await this.gitManager.stageAll({ dir: this.gitManager.getPath(file.path, true) });
@@ -30255,7 +30376,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
     menu.addItem((item) => {
       item.setTitle(`Git: Unstage`).setIcon("minus-circle").setSection("action").onClick((_) => {
         this.promiseQueue.addTask(async () => {
-          if (file instanceof import_obsidian22.TFile) {
+          if (file instanceof import_obsidian23.TFile) {
             await this.gitManager.unstage(file.path, true);
           } else {
             await this.gitManager.unstageAll({ dir: this.gitManager.getPath(file.path, true) });
@@ -30296,8 +30417,6 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
   }
   async onunload() {
     this.app.workspace.unregisterHoverLinkSource(GIT_VIEW_CONFIG.type);
-    this.app.workspace.detachLeavesOfType(GIT_VIEW_CONFIG.type);
-    this.app.workspace.detachLeavesOfType(DIFF_VIEW_CONFIG.type);
     this.unloadPlugin();
     console.log("unloading " + this.manifest.name + " plugin");
   }
@@ -30329,9 +30448,10 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
     };
   }
   async init() {
+    var _a2;
     this.showNotices();
     try {
-      if (import_obsidian22.Platform.isDesktopApp) {
+      if (import_obsidian23.Platform.isDesktopApp) {
         this.gitManager = new SimpleGit(this);
         await this.gitManager.setGitInstance();
       } else {
@@ -30343,7 +30463,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
           this.displayError("Cannot run git command");
           break;
         case "missing-repo":
-          new import_obsidian22.Notice("Can't find a valid git repository. Please create one via the given command or clone an existing repo.");
+          new import_obsidian23.Notice("Can't find a valid git repository. Please create one via the given command or clone an existing repo.");
           break;
         case "valid":
           this.gitReady = true;
@@ -30364,6 +30484,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
           this.registerEvent(this.deleteEvent);
           this.registerEvent(this.createEvent);
           this.registerEvent(this.renameEvent);
+          (_a2 = this.branchBar) == null ? void 0 : _a2.display();
           dispatchEvent(new CustomEvent("git-refresh"));
           if (this.settings.autoPullOnBoot) {
             this.promiseQueue.addTask(() => this.pullChangesFromRemote());
@@ -30395,45 +30516,49 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
   }
   async createNewRepo() {
     await this.gitManager.init();
-    new import_obsidian22.Notice("Initialized new repo");
+    new import_obsidian23.Notice("Initialized new repo");
     await this.init();
   }
   async cloneNewRepo() {
-    const modal = new GeneralModal(this.app, [], "Enter remote URL");
+    const modal = new GeneralModal({ placeholder: "Enter remote URL" });
     const url = await modal.open();
     if (url) {
       const confirmOption = "Vault Root";
-      let dir = await new GeneralModal(this.app, [confirmOption], "Enter directory for clone. It needs to be empty or not existent.", this.gitManager instanceof IsomorphicGit).open();
+      let dir = await new GeneralModal({
+        options: [confirmOption],
+        placeholder: "Enter directory for clone. It needs to be empty or not existent.",
+        allowEmpty: this.gitManager instanceof IsomorphicGit
+      }).open();
       if (dir !== void 0) {
         if (dir === confirmOption) {
           dir = ".";
         }
-        dir = (0, import_obsidian22.normalizePath)(dir);
+        dir = (0, import_obsidian23.normalizePath)(dir);
         if (dir === "/") {
           dir = ".";
         }
         if (dir === ".") {
-          const modal2 = new GeneralModal(this.app, ["NO", "YES"], `Does your remote repo contain a ${app.vault.configDir} directory at the root?`, false, true);
+          const modal2 = new GeneralModal({ options: ["NO", "YES"], placeholder: `Does your remote repo contain a ${app.vault.configDir} directory at the root?`, onlySelection: true });
           const containsConflictDir = await modal2.open();
           if (containsConflictDir === void 0) {
-            new import_obsidian22.Notice("Aborted clone");
+            new import_obsidian23.Notice("Aborted clone");
             return;
           } else if (containsConflictDir === "YES") {
             const confirmOption2 = "DELETE ALL YOUR LOCAL CONFIG AND PLUGINS";
-            const modal3 = new GeneralModal(this.app, ["Abort clone", confirmOption2], `To avoid conflicts, the local ${app.vault.configDir} directory needs to be deleted.`, false, true);
+            const modal3 = new GeneralModal({ options: ["Abort clone", confirmOption2], placeholder: `To avoid conflicts, the local ${app.vault.configDir} directory needs to be deleted.`, onlySelection: true });
             const shouldDelete = await modal3.open() === confirmOption2;
             if (shouldDelete) {
               await this.app.vault.adapter.rmdir(app.vault.configDir, true);
             } else {
-              new import_obsidian22.Notice("Aborted clone");
+              new import_obsidian23.Notice("Aborted clone");
               return;
             }
           }
         }
-        new import_obsidian22.Notice(`Cloning new repo into "${dir}"`);
+        new import_obsidian23.Notice(`Cloning new repo into "${dir}"`);
         await this.gitManager.clone(url, dir);
-        new import_obsidian22.Notice("Cloned new repo.");
-        new import_obsidian22.Notice("Please restart Obsidian");
+        new import_obsidian23.Notice("Cloned new repo.");
+        new import_obsidian23.Notice("Please restart Obsidian");
         if (dir && dir !== ".") {
           this.settings.basePath = dir;
           this.saveSettings();
@@ -30468,11 +30593,14 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
   async createBackup(fromAutoBackup, requestCustomMessage = false) {
     if (!await this.isAllInitialized())
       return;
+    if (this.settings.syncMethod == "reset" && this.settings.pullBeforePush) {
+      await this.pull();
+    }
     if (!await this.commit(fromAutoBackup, requestCustomMessage))
       return;
     if (!this.settings.disablePush) {
       if (await this.gitManager.canPush()) {
-        if (this.settings.pullBeforePush) {
+        if (this.settings.syncMethod != "reset" && this.settings.pullBeforePush) {
           await this.pull();
         }
         await this.push();
@@ -30526,7 +30654,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
       let commitMessage = fromAutoBackup ? this.settings.autoCommitMessage : this.settings.commitMessage;
       if (fromAutoBackup && this.settings.customMessageOnAutoBackup || requestCustomMessage) {
         if (!this.settings.disablePopups && fromAutoBackup) {
-          new import_obsidian22.Notice("Auto backup: Please enter a custom commit message. Leave empty to abort");
+          new import_obsidian23.Notice("Auto backup: Please enter a custom commit message. Leave empty to abort");
         }
         const tempMessage = await new CustomMessageModal(this, true).open();
         if (tempMessage != void 0 && tempMessage != "" && tempMessage != "...") {
@@ -30564,7 +30692,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
       if (remoteUrl == null ? void 0 : remoteUrl.includes("github.com")) {
         const tooBigFiles = files.filter((f) => {
           const file = this.app.vault.getAbstractFileByPath(f.vault_path);
-          if (file instanceof import_obsidian22.TFile) {
+          if (file instanceof import_obsidian23.TFile) {
             return file.stat.size >= 1e8;
           }
           return false;
@@ -30642,9 +30770,57 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
     this.setState(PluginState.idle);
     return true;
   }
+  async switchBranch() {
+    var _a2;
+    if (!await this.isAllInitialized())
+      return;
+    const branchInfo = await this.gitManager.branchInfo();
+    const selectedBranch = await new BranchModal(branchInfo.branches).open();
+    if (selectedBranch != void 0) {
+      await this.gitManager.checkout(selectedBranch);
+      this.displayMessage(`Switched to ${selectedBranch}`);
+      (_a2 = this.branchBar) == null ? void 0 : _a2.display();
+      return selectedBranch;
+    }
+  }
+  async createBranch() {
+    var _a2;
+    if (!await this.isAllInitialized())
+      return;
+    const newBranch = await new GeneralModal({ placeholder: "Create new branch" }).open();
+    if (newBranch != void 0) {
+      await this.gitManager.createBranch(newBranch);
+      this.displayMessage(`Created new branch ${newBranch}`);
+      (_a2 = this.branchBar) == null ? void 0 : _a2.display();
+      return newBranch;
+    }
+  }
+  async deleteBranch() {
+    var _a2;
+    if (!await this.isAllInitialized())
+      return;
+    const branchInfo = await this.gitManager.branchInfo();
+    if (branchInfo.current)
+      branchInfo.branches.remove(branchInfo.current);
+    const branch2 = await new GeneralModal({ options: branchInfo.branches, placeholder: "Delete branch", onlySelection: true }).open();
+    if (branch2 != void 0) {
+      let force = false;
+      if (!await this.gitManager.branchIsMerged(branch2)) {
+        const forceAnswer = await new GeneralModal({ options: ["YES", "NO"], placeholder: "This branch isn't merged into HEAD. Force delete?", onlySelection: true }).open();
+        if (forceAnswer !== "YES") {
+          return;
+        }
+        force = forceAnswer === "YES";
+      }
+      await this.gitManager.deleteBranch(branch2, force);
+      this.displayMessage(`Deleted branch ${branch2}`);
+      (_a2 = this.branchBar) == null ? void 0 : _a2.display();
+      return branch2;
+    }
+  }
   async remotesAreSet() {
     if (!(await this.gitManager.branchInfo()).tracking) {
-      new import_obsidian22.Notice("No upstream branch is set. Please select one.");
+      new import_obsidian23.Notice("No upstream branch is set. Please select one.");
       const remoteBranch = await this.selectRemoteBranch();
       if (remoteBranch == void 0) {
         this.displayError("Aborted. No upstream-branch is set!", 1e4);
@@ -30664,7 +30840,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
         this.doAutoBackup();
       } else {
         this.onFileModifyEventRef = this.app.vault.on("modify", () => this.autoBackupDebouncer());
-        this.autoBackupDebouncer = (0, import_obsidian22.debounce)(() => this.doAutoBackup(), time, true);
+        this.autoBackupDebouncer = (0, import_obsidian23.debounce)(() => this.doAutoBackup(), time, true);
       }
     } else {
       this.timeoutIDBackup = window.setTimeout(() => this.doAutoBackup(), time);
@@ -30740,7 +30916,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
         "Please resolve them and commit per command (This file will be deleted before the commit).",
         ...conflicted.map((e) => {
           const file = this.app.vault.getAbstractFileByPath(e);
-          if (file instanceof import_obsidian22.TFile) {
+          if (file instanceof import_obsidian23.TFile) {
             const link = this.app.metadataCache.fileToLinktext(file, "/");
             return `- [[${link}]]`;
           } else {
@@ -30755,10 +30931,14 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
     if (!await this.isAllInitialized())
       return;
     const remotes = await this.gitManager.getRemotes();
-    const nameModal = new GeneralModal(this.app, remotes, "Select or create a new remote by typing its name and selecting it");
+    const nameModal = new GeneralModal({
+      options: remotes,
+      placeholder: "Select or create a new remote by typing its name and selecting it"
+    });
     const remoteName = await nameModal.open();
     if (remoteName) {
-      const urlModal = new GeneralModal(this.app, [], "Enter the remote URL");
+      const oldUrl = await this.gitManager.getRemoteUrl(remoteName);
+      const urlModal = new GeneralModal({ initialValue: oldUrl });
       const remoteURL = await urlModal.open();
       if (remoteURL) {
         await this.gitManager.setRemote(remoteName, remoteURL);
@@ -30775,13 +30955,13 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
         remotes = await this.gitManager.getRemotes();
       }
     }
-    const nameModal = new GeneralModal(this.app, remotes, "Select or create a new remote by typing its name and selecting it");
+    const nameModal = new GeneralModal({ options: remotes, placeholder: "Select or create a new remote by typing its name and selecting it" });
     const remoteName = selectedRemote != null ? selectedRemote : await nameModal.open();
     if (remoteName) {
       this.displayMessage("Fetching remote branches");
       await this.gitManager.fetch(remoteName);
       const branches = await this.gitManager.getRemoteBranches(remoteName);
-      const branchModal = new GeneralModal(this.app, branches, "Select or create a new remote branch by typing its name and selecting it");
+      const branchModal = new GeneralModal({ options: branches, placeholder: "Select or create a new remote branch by typing its name and selecting it" });
       return await branchModal.open();
     }
   }
@@ -30789,7 +30969,7 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
     if (!await this.isAllInitialized())
       return;
     const remotes = await this.gitManager.getRemotes();
-    const nameModal = new GeneralModal(this.app, remotes, "Select a remote");
+    const nameModal = new GeneralModal({ options: remotes, placeholder: "Select a remote" });
     const remoteName = await nameModal.open();
     if (remoteName) {
       this.gitManager.removeRemote(remoteName);
@@ -30813,18 +30993,18 @@ var ObsidianGit = class extends import_obsidian22.Plugin {
     var _a2;
     (_a2 = this.statusBar) == null ? void 0 : _a2.displayMessage(message.toLowerCase(), timeout);
     if (!this.settings.disablePopups) {
-      new import_obsidian22.Notice(message, 5 * 1e3);
+      new import_obsidian23.Notice(message, 5 * 1e3);
     }
     console.log(`git obsidian message: ${message}`);
   }
   displayError(message, timeout = 10 * 1e3) {
     var _a2;
     if (message instanceof Errors.UserCanceledError) {
-      new import_obsidian22.Notice("Aborted");
+      new import_obsidian23.Notice("Aborted");
       return;
     }
     message = message.toString();
-    new import_obsidian22.Notice(message, timeout);
+    new import_obsidian23.Notice(message, timeout);
     console.log(`git obsidian error: ${message}`);
     (_a2 = this.statusBar) == null ? void 0 : _a2.displayMessage(message.toLowerCase(), timeout);
   }
