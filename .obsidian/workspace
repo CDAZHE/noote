@@ -4,18 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "53cabdf5dc1dfb3a",
+        "id": "4f1d111e9325a471",
         "type": "leaf",
-        "pinned": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "第七章 微分方程.md",
+            "file": "倒计时.md",
             "mode": "preview",
             "backlinks": true,
             "source": false
-          },
-          "pinned": true
+          }
         }
       }
     ],
@@ -35,7 +33,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "f2ucye",
+                "query": "隐函数",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -60,7 +58,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -73,7 +72,7 @@
       {
         "id": "62ae7457e3846620",
         "type": "tabs",
-        "dimension": 37.2960372960373,
+        "dimension": 36.48018648018648,
         "children": [
           {
             "id": "5aea5fbfd57cb573",
@@ -81,7 +80,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "第七章 微分方程.md",
+                "file": "倒计时.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "第七章 微分方程.md"
+                "file": "倒计时.md"
               }
             }
           },
@@ -119,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "第七章 微分方程.md",
+                "file": "倒计时.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,7 +146,7 @@
       {
         "id": "79a1e6c923b7d5cc",
         "type": "tabs",
-        "dimension": 38.34498834498834,
+        "dimension": 39.16083916083917,
         "children": [
           {
             "id": "b4b761c9c99e9db0",
@@ -155,7 +154,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "第七章 微分方程.md",
+                "file": "倒计时.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -189,7 +188,7 @@
       {
         "id": "598b6e73b97d4f6a",
         "type": "tabs",
-        "dimension": 24.358974358974347,
+        "dimension": 24.358974358974354,
         "children": [
           {
             "id": "d22f90da7a18fae6",
@@ -203,19 +202,19 @@
       }
     ],
     "direction": "horizontal",
-    "width": 260.8333435058594
+    "width": 271.5
   },
-  "active": "53cabdf5dc1dfb3a",
+  "active": "4f1d111e9325a471",
   "lastOpenFiles": [
-    "cdz.md",
-    "第七章 微分方程.md",
-    "立方和差.md",
-    "反直觉.md",
-    "自然限定的范围.md",
-    "第五章 定积分及其应用.md",
-    "倒计时.md",
+    "第二章 导数与微分.md",
     "自然语言理解.md",
+    "个人发展规划与创新创业.md",
     "第九学期课表.md",
-    "第三章 一元函数微分学的应用.md"
+    "第七章 微分方程.md",
+    "数学.md",
+    "第三章 一元函数微分学的应用.md",
+    "cdz.md",
+    "立方和差.md",
+    "反直觉.md"
   ]
 }
