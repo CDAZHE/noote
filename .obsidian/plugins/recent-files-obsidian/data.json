@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "应试技巧",
+      "path": "应试技巧.md"
+    },
+    {
+      "basename": "第八章 多元微分及其应用",
+      "path": "第八章 多元微分及其应用.md"
+    },
+    {
+      "basename": "数学",
+      "path": "数学.md"
+    },
+    {
       "basename": "倒计时",
       "path": "倒计时.md"
+    },
+    {
+      "basename": "第七章 微分方程",
+      "path": "第七章 微分方程.md"
+    },
+    {
+      "basename": "求极限方法",
+      "path": "求极限方法.md"
+    },
+    {
+      "basename": "初等函数的图像与特点",
+      "path": "初等函数的图像与特点.md"
     },
     {
       "basename": "第二章 导数与微分",
@@ -19,14 +43,6 @@
     {
       "basename": "第九学期课表",
       "path": "第九学期课表.md"
-    },
-    {
-      "basename": "第七章 微分方程",
-      "path": "第七章 微分方程.md"
-    },
-    {
-      "basename": "数学",
-      "path": "数学.md"
     },
     {
       "basename": "第三章 一元函数微分学的应用",
@@ -159,10 +175,6 @@
     {
       "basename": "傅利叶",
       "path": "Notebook/傅利叶.md"
-    },
-    {
-      "basename": "求极限方法",
-      "path": "求极限方法.md"
     },
     {
       "basename": "汤家凤",
