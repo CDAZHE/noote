@@ -1,0 +1,8 @@
+{
+  "defaultIM": "",
+  "obtainCmd": "",
+  "switchCmd": "",
+  "windowsDefaultIM": "1033",
+  "windowsObtainCmd": "C:\\Users\\cheda\\im-select.exe",
+  "windowsSwitchCmd": "C:\\Users\\cheda\\im-select.exe {im}"
+}
