@@ -1,0 +1,250 @@
+{
+  "main": {
+    "id": "44177cee7e2e9bd8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ea452a87a05e8f52",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c892505266677885",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Daily Notes/2022-10-14.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e85876c951846a5f",
+    "type": "split",
+    "children": [
+      {
+        "id": "146b7008c40ac9ce",
+        "type": "tabs",
+        "dimension": 55.24475524475524,
+        "children": [
+          {
+            "id": "7f58c960f6747266",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "gahxig",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "byCreatedTime"
+              }
+            }
+          },
+          {
+            "id": "bbbb8af5c2dec9a9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f1c83c2c199633de",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "9b4df5e196ea28a4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "596a6fce30dd064f",
+        "type": "tabs",
+        "dimension": 44.75524475524476,
+        "children": [
+          {
+            "id": "b4b761c9c99e9db0",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Daily Notes/2022-10-14.md",
+                "options": {
+                  "collapse-filter": false,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": false,
+                  "showArrow": false,
+                  "textFadeMultiplier": -3,
+                  "nodeSizeMultiplier": 1.07720797720798,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": false,
+                  "centerStrength": 0,
+                  "repelStrength": 0,
+                  "linkStrength": 0.257834757834758,
+                  "linkDistance": 30,
+                  "scale": 1.247398017975528,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "189cdc90dcc55532",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 262.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "f21bdda7414d711b",
+    "type": "split",
+    "children": [
+      {
+        "id": "62ae7457e3846620",
+        "type": "tabs",
+        "dimension": 59.61313012895663,
+        "children": [
+          {
+            "id": "5aea5fbfd57cb573",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Daily Notes/2022-10-14.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "ae9576421c85c0cf",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "3e5f4a7edf34e441",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Daily Notes/2022-10-14.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2d8584b0950ff20c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Daily Notes/2022-10-14.md"
+              }
+            }
+          },
+          {
+            "id": "60ba4e2d539feec5",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "3d9e721f3cec294b",
+        "type": "tabs",
+        "dimension": 40.38686987104337,
+        "children": [
+          {
+            "id": "59434e5f48173c25",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
+            "id": "be2cfa614e3dcb1a",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 309.5
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "60ba4e2d539feec5",
+  "lastOpenFiles": [
+    "复习计划.md",
+    "Daily Notes/2022-10-14.md",
+    "不等式.md",
+    "信息论期末考试.md",
+    "数学.md",
+    "第五章 定积分及其应用.md",
+    "倒计时.md",
+    "Daily Notes/2022-10-09.md",
+    "Daily Notes/2022-10-10.md",
+    "Daily Notes/2022-10-11.md"
+  ]
+}

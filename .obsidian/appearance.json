@@ -1,8 +1,9 @@
 {
-  "baseFontSize": 17,
-  "theme": "moonstone",
-  "cssTheme": "Deep Work",
+  "baseFontSize": 20,
+  "theme": "system",
+  "cssTheme": "Atom",
   "translucency": false,
   "enabledCssSnippets": [],
-  "monospaceFontFamily": "YouYuan"
+  "monospaceFontFamily": "YouYuan",
+  "accentColor": "#248067"
 }
