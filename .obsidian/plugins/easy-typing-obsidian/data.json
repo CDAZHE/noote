@@ -4,6 +4,7 @@
   "BaseObEditEnhance": true,
   "FW2HWEnhance": true,
   "AutoFormat": true,
+  "ExcludeFiles": "",
   "ChineseEnglishSpace": true,
   "ChineseNoSpace": true,
   "PunctuationSpace": true,
@@ -15,7 +16,7 @@
   "InlineLinkSpaceMode": 1,
   "InlineLinkSmartSpace": true,
   "UserDefinedRegSwitch": true,
-  "UserDefinedRegExp": "{{.*?}}|++\n#[\\u4e00-\\u9fa5\\w\\/]+|++\n\\[\\!.*?\\][-+]{0,1}|-+\n(https?:\\/\\/|ftp:\\/\\/|obsidian:\\/\\/|zotero:\\/\\/|www.)[^\\s（）《》。,，！？;；：“”‘’\\)\\(\\[\\]\\{\\}']+|++\n\\[.*\\]\\(bookxnotepro:\\/\\/opennote\\/\\?nb=.*\\)|++",
+  "UserDefinedRegExp": "{{.*?}}|++\n#[\\u4e00-\\u9fa5\\w\\/]+|++\n\\[\\!.*?\\][-+]{0,1}|-+\n(https?:\\/\\/|ftp:\\/\\/|obsidian:\\/\\/|zotero:\\/\\/|www.)[^\\s（）《》。,，！？;；：“”‘’\\)\\(\\[\\]\\{\\}']+|++\n\\[.*]\\(bookxnotepro://opennote/\\?nb={.*}.*\\)|++\n",
   "debug": false,
   "userSelRepRuleTrigger": [
     "-"

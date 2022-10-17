@@ -4,23 +4,75 @@
     "type": "split",
     "children": [
       {
-        "id": "ea452a87a05e8f52",
-        "type": "tabs",
+        "id": "89e72e3bacca1542",
+        "type": "split",
         "children": [
           {
-            "id": "c892505266677885",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Daily Notes/2022-10-14.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+            "id": "f7a8ed1e7563c412",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "55a00ec486350cca",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "ce4d4537515755a5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "数学.md",
+                    "mode": "preview",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "a63ebdadca1d53d5",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "第九章 二重积分.md",
+                    "mode": "preview",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
               }
-            }
+            ]
+          },
+          {
+            "id": "f0b3131171c50b48",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "f3cbad7769254c39",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "第十二章 多元积分学及其应用todo.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
           }
-        ]
+        ],
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -32,7 +84,7 @@
       {
         "id": "146b7008c40ac9ce",
         "type": "tabs",
-        "dimension": 55.24475524475524,
+        "dimension": 69.25545571245186,
         "children": [
           {
             "id": "7f58c960f6747266",
@@ -40,10 +92,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "gahxig",
+                "query": "[036](bookxnotepro://opennote/?nb={4b0b849c-f284-459f-9b9c-e14b0ecf8ba2}&book=4f1972a39d8f1176257957a09d832b75&page=35&x=224&y=633&id=48&uuid=411c936f8b8fee88f2a338c211767006)",
                 "matchingCase": false,
                 "explainSearch": false,
-                "collapseAll": true,
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byCreatedTime"
               }
@@ -78,13 +130,91 @@
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "596a6fce30dd064f",
         "type": "tabs",
-        "dimension": 44.75524475524476,
+        "dimension": 30.744544287548138,
+        "children": [
+          {
+            "id": "189cdc90dcc55532",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 262.5,
+    "collapsed": true
+  },
+  "right": {
+    "id": "f21bdda7414d711b",
+    "type": "split",
+    "children": [
+      {
+        "id": "62ae7457e3846620",
+        "type": "tabs",
+        "dimension": 38.15028901734104,
+        "children": [
+          {
+            "id": "5aea5fbfd57cb573",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "3e5f4a7edf34e441",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "2d8584b0950ff20c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md"
+              }
+            }
+          },
+          {
+            "id": "60ba4e2d539feec5",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "98f495f2727efbae",
+        "type": "tabs",
+        "dimension": 21.451509312780992,
         "children": [
           {
             "id": "b4b761c9c99e9db0",
@@ -92,7 +222,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Daily Notes/2022-10-14.md",
+                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -120,94 +250,13 @@
                 }
               }
             }
-          },
-          {
-            "id": "189cdc90dcc55532",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 1
-      }
-    ],
-    "direction": "horizontal",
-    "width": 262.5,
-    "collapsed": true
-  },
-  "right": {
-    "id": "f21bdda7414d711b",
-    "type": "split",
-    "children": [
-      {
-        "id": "62ae7457e3846620",
-        "type": "tabs",
-        "dimension": 59.61313012895663,
-        "children": [
-          {
-            "id": "5aea5fbfd57cb573",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Daily Notes/2022-10-14.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
-              }
-            }
-          },
-          {
-            "id": "ae9576421c85c0cf",
-            "type": "leaf",
-            "state": {
-              "type": "quiet-outline",
-              "state": {}
-            }
-          },
-          {
-            "id": "3e5f4a7edf34e441",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Daily Notes/2022-10-14.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "2d8584b0950ff20c",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Daily Notes/2022-10-14.md"
-              }
-            }
-          },
-          {
-            "id": "60ba4e2d539feec5",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "3d9e721f3cec294b",
         "type": "tabs",
-        "dimension": 40.38686987104337,
+        "dimension": 40.39820166987797,
         "children": [
           {
             "id": "59434e5f48173c25",
@@ -236,15 +285,15 @@
   },
   "active": "60ba4e2d539feec5",
   "lastOpenFiles": [
-    "复习计划.md",
-    "Daily Notes/2022-10-14.md",
-    "不等式.md",
-    "信息论期末考试.md",
     "数学.md",
-    "第五章 定积分及其应用.md",
-    "倒计时.md",
-    "Daily Notes/2022-10-09.md",
-    "Daily Notes/2022-10-10.md",
-    "Daily Notes/2022-10-11.md"
+    "第九章 二重积分.md",
+    "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+    "第十二章 多元积分学及其应用todo.md",
+    "Daily Notes/2022-10-17.md",
+    "统计.md",
+    "Template/daily_note.md",
+    "复习计划.md",
+    "抛物线.md",
+    "用时统计.md"
   ]
 }

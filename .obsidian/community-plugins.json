@@ -5,7 +5,6 @@
   "obsidian-style-settings",
   "quick-latex",
   "media-extended",
-  "shortcuts-extender",
   "note-refactor-obsidian",
   "cm-chs-patch",
   "remember-cursor-position",
@@ -20,8 +19,8 @@
   "obsidian-vimrc-support",
   "obsidian-copy-block-link",
   "table-editor-obsidian",
-  "easy-typing-obsidian",
   "vim-im-select",
   "obsidian-tracker",
-  "lapel"
+  "lapel",
+  "easy-typing-obsidian"
 ]

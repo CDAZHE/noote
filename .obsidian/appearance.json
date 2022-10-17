@@ -1,9 +1,10 @@
 {
-  "baseFontSize": 20,
+  "baseFontSize": 18,
   "theme": "system",
   "cssTheme": "Atom",
   "translucency": false,
   "enabledCssSnippets": [],
   "monospaceFontFamily": "YouYuan",
-  "accentColor": "#248067"
+  "accentColor": "#248067",
+  "interfaceFontFamily": ""
 }
