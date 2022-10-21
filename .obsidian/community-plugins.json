@@ -1,10 +1,8 @@
 [
-  "obsidian-mind-map",
   "obsidian-outliner",
   "obsidian-image-toolkit",
   "obsidian-style-settings",
   "quick-latex",
-  "media-extended",
   "note-refactor-obsidian",
   "cm-chs-patch",
   "remember-cursor-position",
@@ -14,7 +12,6 @@
   "calendar",
   "obsidian-git",
   "block-reference-count",
-  "recent-files-obsidian",
   "templater-obsidian",
   "obsidian-vimrc-support",
   "obsidian-copy-block-link",
@@ -22,5 +19,6 @@
   "vim-im-select",
   "obsidian-tracker",
   "lapel",
-  "easy-typing-obsidian"
+  "easy-typing-obsidian",
+  "recent-files-obsidian"
 ]

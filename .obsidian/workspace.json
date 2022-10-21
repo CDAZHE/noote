@@ -4,75 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "89e72e3bacca1542",
-        "type": "split",
+        "id": "f7a8ed1e7563c412",
+        "type": "tabs",
         "children": [
           {
-            "id": "f7a8ed1e7563c412",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "55a00ec486350cca",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "ce4d4537515755a5",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "数学.md",
-                    "mode": "preview",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
-              },
-              {
-                "id": "a63ebdadca1d53d5",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "第九章 二重积分.md",
-                    "mode": "preview",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
+            "id": "047431298df9f390",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "第九章习题.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
-            ]
+            }
           },
           {
-            "id": "f0b3131171c50b48",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "f3cbad7769254c39",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "第十二章 多元积分学及其应用todo.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
-                  }
-                }
+            "id": "c3bb1ceb1584d064",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "计算错误.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
               }
-            ]
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,9 +53,9 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "[036](bookxnotepro://opennote/?nb={4b0b849c-f284-459f-9b9c-e14b0ecf8ba2}&book=4f1972a39d8f1176257957a09d832b75&page=35&x=224&y=633&id=48&uuid=411c936f8b8fee88f2a338c211767006)",
+                "query": "积分上",
                 "matchingCase": false,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "byCreatedTime"
@@ -159,7 +120,7 @@
       {
         "id": "62ae7457e3846620",
         "type": "tabs",
-        "dimension": 38.15028901734104,
+        "dimension": 33.71868978805395,
         "children": [
           {
             "id": "5aea5fbfd57cb573",
@@ -167,7 +128,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+                "file": "第九章习题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -184,7 +145,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+                "file": "第九章习题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -196,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md"
+                "file": "第九章习题.md"
               }
             }
           },
@@ -214,7 +175,7 @@
       {
         "id": "98f495f2727efbae",
         "type": "tabs",
-        "dimension": 21.451509312780992,
+        "dimension": 35.32434168272319,
         "children": [
           {
             "id": "b4b761c9c99e9db0",
@@ -222,7 +183,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+                "file": "第九章习题.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -245,7 +206,7 @@
                   "repelStrength": 0,
                   "linkStrength": 0.257834757834758,
                   "linkDistance": 30,
-                  "scale": 1.247398017975528,
+                  "scale": 1.0534979423868298,
                   "close": true
                 }
               }
@@ -256,7 +217,7 @@
       {
         "id": "3d9e721f3cec294b",
         "type": "tabs",
-        "dimension": 40.39820166987797,
+        "dimension": 30.956968529222866,
         "children": [
           {
             "id": "59434e5f48173c25",
@@ -285,15 +246,15 @@
   },
   "active": "60ba4e2d539feec5",
   "lastOpenFiles": [
-    "数学.md",
+    "定积分积分变量可换.md",
+    "第九章习题.md",
     "第九章 二重积分.md",
-    "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用todo.md",
+    "十二章习题.md",
     "第十二章 多元积分学及其应用todo.md",
-    "Daily Notes/2022-10-17.md",
-    "统计.md",
-    "Template/daily_note.md",
-    "复习计划.md",
-    "抛物线.md",
-    "用时统计.md"
+    "第十一章 向量代数与空间解析结合及多元微分学在几何上的应用.md",
+    "计算处理方法.md",
+    "计算错误.md",
+    "Daily Notes/2022-10-21.md",
+    "数学.md"
   ]
 }
