@@ -7,7 +7,6 @@
   "cm-chs-patch",
   "remember-cursor-position",
   "extract-url",
-  "obsidian-enhancing-mindmap",
   "obsidian-quiet-outline",
   "calendar",
   "obsidian-git",
@@ -15,10 +14,10 @@
   "templater-obsidian",
   "obsidian-vimrc-support",
   "obsidian-copy-block-link",
-  "table-editor-obsidian",
   "vim-im-select",
   "obsidian-tracker",
   "lapel",
   "easy-typing-obsidian",
-  "recent-files-obsidian"
+  "recent-files-obsidian",
+  "obsidian-excalidraw-plugin"
 ]
