@@ -1,7 +1,7 @@
 {
-  "baseFontSize": 16,
+  "baseFontSize": 18,
   "theme": "system",
-  "cssTheme": "Atom",
+  "cssTheme": "Blue Topaz",
   "translucency": false,
   "enabledCssSnippets": [],
   "monospaceFontFamily": "YouYuan",

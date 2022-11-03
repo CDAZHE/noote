@@ -4,37 +4,62 @@
     "type": "split",
     "children": [
       {
-        "id": "5b3737f49237b599",
-        "type": "tabs",
+        "id": "27db5f98063269e5",
+        "type": "split",
         "children": [
           {
-            "id": "2bfd17b8a18bec58",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "第十二章 多元积分学及其应用todo.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+            "id": "9384ada4e0a4fc6d",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "359f9a4336cb06a0",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "第十章 无穷级数.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              },
+              {
+                "id": "b315f44ac9ff92e8",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "第三章 一元函数微分学的应用.md",
+                    "mode": "preview",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
               }
-            }
+            ]
           },
           {
-            "id": "454cdfbd647350d9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "计算错误.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+            "id": "28e3a65639f3a82a",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "92e90564194b9c60",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "第十章习题.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
               }
-            }
+            ]
           }
         ],
-        "currentTab": 1
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -46,7 +71,7 @@
       {
         "id": "146b7008c40ac9ce",
         "type": "tabs",
-        "dimension": 69.25545571245186,
+        "dimension": 59.495192307692314,
         "children": [
           {
             "id": "7f58c960f6747266",
@@ -54,10 +79,10 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "分部 ln",
+                "query": "反例",
                 "matchingCase": false,
                 "explainSearch": true,
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "byCreatedTime"
               }
@@ -92,13 +117,12 @@
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "596a6fce30dd064f",
         "type": "tabs",
-        "dimension": 30.744544287548138,
+        "dimension": 40.50480769230769,
         "children": [
           {
             "id": "189cdc90dcc55532",
@@ -130,7 +154,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算错误.md",
+                "file": "第十章习题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -147,7 +171,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "计算错误.md",
+                "file": "第十章习题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -159,7 +183,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算错误.md"
+                "file": "第十章习题.md"
               }
             }
           },
@@ -169,21 +193,6 @@
             "state": {
               "type": "git-view",
               "state": {}
-            }
-          },
-          {
-            "id": "0456ab03bc782118",
-            "type": "leaf",
-            "state": {
-              "type": "search-ref",
-              "state": {
-                "query": "(file:(\"第十二章 多元积分学及其应用todo.md\") \"^fhj01e\") OR (\"第十二章 多元积分学及其应用todo#^fhj01e\") ",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
             }
           }
         ],
@@ -200,7 +209,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "计算错误.md",
+                "file": "第十章习题.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -243,14 +252,6 @@
               "type": "recent-files",
               "state": {}
             }
-          },
-          {
-            "id": "be2cfa614e3dcb1a",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
         ]
       }
@@ -258,20 +259,17 @@
     "direction": "horizontal",
     "width": 309.5
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
   "active": "60ba4e2d539feec5",
   "lastOpenFiles": [
-    "十二章习题.md",
-    "第十二章 多元积分学及其应用todo.md",
-    "@记忆.md",
-    "计算错误.md",
-    "数学.md",
-    "第五章 定积分及其应用.md",
-    "第四章 不定积分.md",
-    "倒计时.md",
-    "Daily Notes/2022-10-24.md",
-    "Daily Notes/2022-10-25.md"
+    "第十章 无穷级数.md",
+    "第十章习题.md",
+    "Daily Notes/2022-11-03.md",
+    "计算处理方法.md",
+    "放缩.md",
+    "泰勒.md",
+    "第三章 一元函数微分学的应用.md",
+    "Daily Notes/2022-11-02.md",
+    "Daily Notes/2022-10-03.md",
+    "Daily Notes/2022-11-01.md"
   ]
 }
