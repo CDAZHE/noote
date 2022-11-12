@@ -4,59 +4,127 @@
     "type": "split",
     "children": [
       {
-        "id": "27db5f98063269e5",
+        "id": "fc5cbe169619d029",
         "type": "split",
         "children": [
           {
-            "id": "9384ada4e0a4fc6d",
-            "type": "tabs",
+            "id": "8cbc09d2ddd63702",
+            "type": "split",
             "children": [
               {
-                "id": "359f9a4336cb06a0",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "第十章 无穷级数.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
+                "id": "b3c226e2073ac3e4",
+                "type": "tabs",
+                "dimension": 70.28347996089931,
+                "children": [
+                  {
+                    "id": "e8bd583aedd5c554",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "第十二章 多元积分学及其应用.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    },
+                    "group": "93338de0d7eef3e6"
+                  },
+                  {
+                    "id": "7ef3620fab698346",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "第五章 定积分及其应用.md",
+                        "mode": "preview",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
                   }
-                }
+                ]
               },
               {
-                "id": "b315f44ac9ff92e8",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "第三章 一元函数微分学的应用.md",
-                    "mode": "preview",
-                    "backlinks": true,
-                    "source": false
+                "id": "8df196bbfdfd5c73",
+                "type": "tabs",
+                "dimension": 29.716520039100686,
+                "children": [
+                  {
+                    "id": "e0b9c112a2a53762",
+                    "type": "leaf",
+                    "state": {
+                      "type": "outline",
+                      "state": {
+                        "file": "第十二章 多元积分学及其应用.md"
+                      }
+                    },
+                    "group": "93338de0d7eef3e6"
                   }
-                }
+                ]
               }
-            ]
+            ],
+            "direction": "vertical"
           },
           {
-            "id": "28e3a65639f3a82a",
-            "type": "tabs",
+            "id": "4dbb914aaa5d6f59",
+            "type": "split",
             "children": [
               {
-                "id": "92e90564194b9c60",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "第十章习题.md",
-                    "mode": "source",
-                    "backlinks": true,
-                    "source": false
+                "id": "a4d3d5421457b34c",
+                "type": "tabs",
+                "dimension": 72.14076246334311,
+                "children": [
+                  {
+                    "id": "fb55c13c28d98e01",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "十二章习题.md",
+                        "mode": "source",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    },
+                    "group": "4e6a2d811a54bb4b"
+                  },
+                  {
+                    "id": "4d948f2794c29ebf",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "第七章 微分方程.md",
+                        "mode": "preview",
+                        "backlinks": true,
+                        "source": false
+                      }
+                    }
                   }
-                }
+                ],
+                "currentTab": 1
+              },
+              {
+                "id": "88e5700bdab1efdb",
+                "type": "tabs",
+                "dimension": 27.859237536656888,
+                "children": [
+                  {
+                    "id": "41d72c3e76301c06",
+                    "type": "leaf",
+                    "state": {
+                      "type": "outline",
+                      "state": {
+                        "file": "十二章习题.md"
+                      }
+                    },
+                    "group": "4e6a2d811a54bb4b"
+                  }
+                ]
               }
-            ]
+            ],
+            "direction": "vertical"
           }
         ],
         "direction": "horizontal"
@@ -79,7 +147,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "反例",
+                "query": "\"y=-x\"",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -131,13 +199,29 @@
               "type": "calendar",
               "state": {}
             }
+          },
+          {
+            "id": "5c29b6f5ee4998d1",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "59434e5f48173c25",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 262.5,
-    "collapsed": true
+    "width": 262.5
   },
   "right": {
     "id": "f21bdda7414d711b",
@@ -146,7 +230,7 @@
       {
         "id": "62ae7457e3846620",
         "type": "tabs",
-        "dimension": 33.71868978805395,
+        "dimension": 55.32381997804611,
         "children": [
           {
             "id": "5aea5fbfd57cb573",
@@ -154,7 +238,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "第十章习题.md",
+                "file": "第七章 微分方程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -171,7 +255,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "第十章习题.md",
+                "file": "第七章 微分方程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -183,7 +267,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "第十章习题.md"
+                "file": "第七章 微分方程.md"
               }
             }
           },
@@ -199,9 +283,9 @@
         "currentTab": 3
       },
       {
-        "id": "98f495f2727efbae",
+        "id": "3d9e721f3cec294b",
         "type": "tabs",
-        "dimension": 35.32434168272319,
+        "dimension": 44.6761800219539,
         "children": [
           {
             "id": "b4b761c9c99e9db0",
@@ -209,48 +293,33 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "第十章习题.md",
+                "file": "第七章 微分方程.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
                   "localJumps": 1,
                   "localBacklinks": true,
                   "localForelinks": true,
-                  "localInterlinks": false,
+                  "localInterlinks": true,
                   "showTags": false,
                   "showAttachments": false,
                   "hideUnresolved": false,
                   "collapse-color-groups": true,
                   "colorGroups": [],
-                  "collapse-display": false,
+                  "collapse-display": true,
                   "showArrow": false,
                   "textFadeMultiplier": -3,
                   "nodeSizeMultiplier": 1.07720797720798,
                   "lineSizeMultiplier": 1,
-                  "collapse-forces": false,
+                  "collapse-forces": true,
                   "centerStrength": 0,
                   "repelStrength": 0,
                   "linkStrength": 0.257834757834758,
                   "linkDistance": 30,
-                  "scale": 1.0534979423868287,
+                  "scale": 1.7488306879214903,
                   "close": true
                 }
               }
-            }
-          }
-        ]
-      },
-      {
-        "id": "3d9e721f3cec294b",
-        "type": "tabs",
-        "dimension": 30.956968529222866,
-        "children": [
-          {
-            "id": "59434e5f48173c25",
-            "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
             }
           }
         ]
@@ -259,17 +328,55 @@
     "direction": "horizontal",
     "width": 309.5
   },
-  "active": "60ba4e2d539feec5",
+  "floating": {
+    "id": "5b8847cfed93bcb2",
+    "type": "floating",
+    "children": [
+      {
+        "id": "848cfcb33c7efa7f",
+        "type": "window",
+        "children": [
+          {
+            "id": "fd3f97fb89523937",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "e49d308375c5add0",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "计算错误.md",
+                    "mode": "source",
+                    "backlinks": true,
+                    "source": false
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 99,
+        "y": 269,
+        "width": 803,
+        "height": 1164,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "4d948f2794c29ebf",
   "lastOpenFiles": [
-    "第十章 无穷级数.md",
-    "第十章习题.md",
-    "Daily Notes/2022-11-03.md",
-    "计算处理方法.md",
-    "放缩.md",
-    "泰勒.md",
-    "第三章 一元函数微分学的应用.md",
-    "Daily Notes/2022-11-02.md",
-    "Daily Notes/2022-10-03.md",
-    "Daily Notes/2022-11-01.md"
+    "十二章习题.md",
+    "第十二章 多元积分学及其应用.md",
+    "第五章 定积分及其应用.md",
+    "Daily Notes/2022-11-12.md",
+    "Daily Notes/2022-11-11.md",
+    "计算错误.md",
+    "image/十二章习题 2022-11-11 22.49.56.excalidraw.md",
+    "第九章 二重积分.md",
+    "对称.md",
+    "image/对称 2022-10-26 21.16.11.excalidraw.md"
   ]
 }
