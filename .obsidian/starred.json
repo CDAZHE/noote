@@ -29,6 +29,11 @@
       "type": "file",
       "title": "数学",
       "path": "数学.md"
+    },
+    {
+      "type": "file",
+      "title": "女娲补天",
+      "path": "女娲补天.md"
     }
   ]
 }

@@ -1,8 +1,88 @@
 {
   "recentFiles": [
     {
-      "basename": "第七章 微分方程",
-      "path": "第七章 微分方程.md"
+      "basename": "60c085e6bt42b9d0fe8c8b76dd4e1a46",
+      "path": "media/60c085e6bt42b9d0fe8c8b76dd4e1a46.jpg"
+    },
+    {
+      "basename": "772b78ac6t730ec1fb35b7c2bde04091",
+      "path": "media/772b78ac6t730ec1fb35b7c2bde04091.jpg"
+    },
+    {
+      "basename": "dcb77fb76q22120f18ae570f2b4e0d8c",
+      "path": "media/dcb77fb76q22120f18ae570f2b4e0d8c.jpg"
+    },
+    {
+      "basename": "fb86b87cft2ad4b187b313da3085b2d5",
+      "path": "media/fb86b87cft2ad4b187b313da3085b2d5.jpg"
+    },
+    {
+      "basename": "线性代数",
+      "path": "线性代数.md"
+    },
+    {
+      "basename": "数学",
+      "path": "数学.md"
+    },
+    {
+      "basename": "英语作文",
+      "path": "英语作文.md"
+    },
+    {
+      "basename": "女娲补天",
+      "path": "女娲补天.md"
+    },
+    {
+      "basename": "2022-11-19",
+      "path": "Daily Notes/2022-11-19.md"
+    },
+    {
+      "basename": "2022-11-18",
+      "path": "Daily Notes/2022-11-18.md"
+    },
+    {
+      "basename": "倒计时",
+      "path": "倒计时.md"
+    },
+    {
+      "basename": "第九学期课表",
+      "path": "第九学期课表.md"
+    },
+    {
+      "basename": "复习计划",
+      "path": "复习计划.md"
+    },
+    {
+      "basename": "2022-11-15",
+      "path": "Daily Notes/2022-11-15.md"
+    },
+    {
+      "basename": "2022-11-14",
+      "path": "Daily Notes/2022-11-14.md"
+    },
+    {
+      "basename": "daily_note",
+      "path": "Template/daily_note.md"
+    },
+    {
+      "basename": "数学记笔记方法",
+      "path": "数学记笔记方法.md"
+    },
+    {
+      "basename": "2022-10-03",
+      "path": "Daily Notes/2022-10-03.md"
+    },
+    {
+      "basename": "计算错误",
+      "path": "计算错误.md"
+    },
+    {
+      "basename": "全微分",
+      "path": "全微分.md"
+    },
+    {
+      "basename": "2022-11-13",
+      "path": "Daily Notes/2022-11-13.md"
     },
     {
       "basename": "十二章习题",
@@ -13,8 +93,32 @@
       "path": "第十二章 多元积分学及其应用.md"
     },
     {
+      "basename": "第九章习题",
+      "path": "第九章习题.md"
+    },
+    {
+      "basename": "@记忆",
+      "path": "@记忆.md"
+    },
+    {
       "basename": "第五章 定积分及其应用",
       "path": "第五章 定积分及其应用.md"
+    },
+    {
+      "basename": "第七章 微分方程",
+      "path": "第七章 微分方程.md"
+    },
+    {
+      "basename": "第八章 多元微分及其应用",
+      "path": "第八章 多元微分及其应用.md"
+    },
+    {
+      "basename": "第九章 二重积分",
+      "path": "第九章 二重积分.md"
+    },
+    {
+      "basename": "第八章题目",
+      "path": "第八章题目.md"
     },
     {
       "basename": "2022-11-12",
@@ -25,16 +129,8 @@
       "path": "Daily Notes/2022-11-11.md"
     },
     {
-      "basename": "计算错误",
-      "path": "计算错误.md"
-    },
-    {
       "basename": "十二章习题 2022-11-11 22.49.56.excalidraw",
       "path": "image/十二章习题 2022-11-11 22.49.56.excalidraw.md"
-    },
-    {
-      "basename": "第九章 二重积分",
-      "path": "第九章 二重积分.md"
     },
     {
       "basename": "对称",
@@ -51,14 +147,6 @@
     {
       "basename": "2022-11-10",
       "path": "Daily Notes/2022-11-10.md"
-    },
-    {
-      "basename": "倒计时",
-      "path": "倒计时.md"
-    },
-    {
-      "basename": "数学",
-      "path": "数学.md"
     },
     {
       "basename": "第十章 无穷级数",
@@ -89,10 +177,6 @@
       "path": "Daily Notes/2022-11-09.md"
     },
     {
-      "basename": "2022-11-19",
-      "path": "Daily Notes/2022-11-19.md"
-    },
-    {
       "basename": "积分中能够代入的公式",
       "path": "积分中能够代入的公式.md"
     },
@@ -105,18 +189,6 @@
       "path": "texlive.md"
     },
     {
-      "basename": "第八章 多元微分及其应用",
-      "path": "第八章 多元微分及其应用.md"
-    },
-    {
-      "basename": "第八章题目",
-      "path": "第八章题目.md"
-    },
-    {
-      "basename": "第九章习题",
-      "path": "第九章习题.md"
-    },
-    {
       "basename": "2022-11-06",
       "path": "Daily Notes/2022-11-06.md"
     },
@@ -127,78 +199,6 @@
     {
       "basename": "第十章 无穷级数 2022-11-05 21.53.14.excalidraw",
       "path": "image/第十章 无穷级数 2022-11-05 21.53.14.excalidraw.md"
-    },
-    {
-      "basename": "泰勒",
-      "path": "泰勒.md"
-    },
-    {
-      "basename": "2022-11-04",
-      "path": "Daily Notes/2022-11-04.md"
-    },
-    {
-      "basename": "自然限定的范围",
-      "path": "自然限定的范围.md"
-    },
-    {
-      "basename": "@记忆",
-      "path": "@记忆.md"
-    },
-    {
-      "basename": "2022-11-01",
-      "path": "Daily Notes/2022-11-01.md"
-    },
-    {
-      "basename": "2022-11-02",
-      "path": "Daily Notes/2022-11-02.md"
-    },
-    {
-      "basename": "2022-11-03",
-      "path": "Daily Notes/2022-11-03.md"
-    },
-    {
-      "basename": "统计",
-      "path": "统计.md"
-    },
-    {
-      "basename": "第一章 极限与连续",
-      "path": "第一章 极限与连续.md"
-    },
-    {
-      "basename": "放缩",
-      "path": "放缩.md"
-    },
-    {
-      "basename": "2022-10-03",
-      "path": "Daily Notes/2022-10-03.md"
-    },
-    {
-      "basename": "特殊结构",
-      "path": "特殊结构.md"
-    },
-    {
-      "basename": "收集的习题",
-      "path": "收集的习题.md"
-    },
-    {
-      "basename": "反直觉",
-      "path": "反直觉.md"
-    },
-    {
-      "basename": "等比数列",
-      "path": "等比数列.md"
-    },
-    {
-      "basename": "2022-10-24",
-      "path": "Daily Notes/2022-10-24.md"
-    },
-    {
-      "basename": "2022-10-25",
-      "path": "Daily Notes/2022-10-25.md"
-    },
-    {
-      "basename": "2022-10-26",
-      "path": "Daily Notes/2022-10-26.md"
     }
   ],
   "omittedPaths": [],
