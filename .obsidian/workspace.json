@@ -4,15 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "284c6715ba192a9d",
+        "id": "d409dc41739fbbd2",
         "type": "tabs",
         "children": [
           {
-            "id": "1254e549add8bd06",
+            "id": "70709b943a5081cb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "线性代数.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "78fcebd1d09713a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "英语作文.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -35,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "二重积分 序",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -74,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       },
       {
         "id": "596a6fce30dd064f",
@@ -102,7 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.5
+    "width": 289.5
   },
   "right": {
     "id": "f21bdda7414d711b",
@@ -119,6 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "线性代数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,6 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "线性代数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -145,7 +165,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "线性代数.md"
+              }
             }
           },
           {
@@ -170,6 +192,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "线性代数.md",
                 "options": {
                   "collapse-filter": false,
                   "search": "",
@@ -192,7 +215,7 @@
                   "repelStrength": 0,
                   "linkStrength": 0.257834757834758,
                   "linkDistance": 30,
-                  "scale": 1.7488306879214903,
+                  "scale": 0.8897383983458091,
                   "close": true
                 }
               }
@@ -206,15 +229,15 @@
   },
   "active": "60ba4e2d539feec5",
   "lastOpenFiles": [
-    "media/60c085e6bt42b9d0fe8c8b76dd4e1a46.jpg",
-    "media/772b78ac6t730ec1fb35b7c2bde04091.jpg",
-    "media/dcb77fb76q22120f18ae570f2b4e0d8c.jpg",
-    "media/fb86b87cft2ad4b187b313da3085b2d5.jpg",
-    "线性代数.md",
-    "数学.md",
     "英语作文.md",
-    "女娲补天.md",
-    "Daily Notes/2022-11-19.md",
-    "Daily Notes/2022-11-18.md"
+    "线性代数.md",
+    "Daily Notes/2022-12-05.md",
+    "809.md",
+    "倒计时.md",
+    "Daily Notes/2022-12-02.md",
+    "809要求.md",
+    "Daily Notes/2022-12-01.md",
+    "等比数列.md",
+    "Daily Notes/2022-11-30.md"
   ]
 }
